@@ -2,7 +2,7 @@
 
 ## Prepared repository
 
-The external proof repository is owned by **Ghuffy1** and is **private**. Will Howe, Grant Huffman, Jensen Kohlmeyer, and Liam Kruer are listed as equal contributors, with the GitHub handles and correspondence addresses supplied by the owner. The paper orders authors alphabetically by surname and includes the AI acknowledgment.
+The external proof repository is owned by **Ghuffy1** and has been authorized for public release after final verification. Will Howe, Grant Huffman, Jensen Kohlmeyer, and Liam Kruer are listed as equal contributors, with the GitHub handles and correspondence addresses supplied by the owner. The paper orders authors alphabetically by surname and includes the AI acknowledgment.
 
 The current preparation targets the legacy process for **JSP-000276 / Erdős 332**. The official rule snapshot is pinned in `rules-review.json`.
 
@@ -14,7 +14,7 @@ The original-question entry point supplies the concrete sufficient-condition pre
 
 ## Items for the owner and contributors
 
-- [ ] Authorize public release of the repository and submission materials.
+- [x] The owner authorized public release of the repository and submission materials after final verification.
 - [ ] Confirm each contributor's role description and the intended claim categories personally.
 - [ ] Review and approve the contribution PR draft and proposed catalog patch.
 - [ ] After the prerequisite merge, each applicant submits their own claim through their own account.

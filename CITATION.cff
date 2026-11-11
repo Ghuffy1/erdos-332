@@ -1,11 +1,11 @@
 cff-version: 1.2.0
-message: "If authorized for citation, cite the four equal-contribution authors listed here."
+message: "Please cite the four equal-contribution authors listed here."
 type: software
 title: "Recurring Differences from Overlapping Arithmetic Progressions"
-version: "1.0.0-preparation"
+version: "1.0.0"
 repository-code: "https://github.com/Ghuffy1/erdos-332"
 url: "https://github.com/Ghuffy1/erdos-332"
-abstract: "A private mathematical manuscript and formal proof of progression-based sufficient conditions for syndetic recurrent difference sets, prepared for review of Erdős 332 / JSP-000276."
+abstract: "A mathematical manuscript and formal proof of progression-based sufficient conditions for syndetic recurrent difference sets, prepared for review of Erdős 332 / JSP-000276."
 authors:
   - family-names: Howe
     given-names: Will

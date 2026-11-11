@@ -11,7 +11,7 @@ The selected proof commit is `6d65e28f986b8434d9448e6e4ba73e7ddd17ef43` on `main
 
 ## Obtain the exact revision
 
-Access requires permission while the repository is private.
+The commands below select the exact formal-proof revision.
 
 ```sh
 git clone https://github.com/Ghuffy1/erdos-332.git

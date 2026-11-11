@@ -21,12 +21,12 @@
       "sha256": "16bec06badfd4db074bc925f1e20e7cb08257f8da5162e9529410eb4e1d164ad"
     },
     "paper/recurring_differences.pdf": {
-      "bytes": 123700,
-      "sha256": "044f491d87c80a1a74a007b754eefb17fd2428bdacc473c5b473442bbfd0c9b7"
+      "bytes": 127169,
+      "sha256": "7ceeca864f8efe2c511cea4756d9217b2a07b7d0d89fa574b20d20f7bc191104"
     },
     "paper/recurring_differences.tex": {
-      "bytes": 30868,
-      "sha256": "7ad6034e6b4531c71ab482b4531d3c311d10c5709195fd405897f30d26a6ea8e"
+      "bytes": 31988,
+      "sha256": "738954bedbb36708e5e31a3d08059d8e17cf604e638a6d7c37f602402b38a0ea"
     },
     "lake-manifest.json": {
       "bytes": 3542,
@@ -43,5 +43,7 @@
     "Erdos332.main_finite_test",
     "Erdos332.centered_finite_intersection"
   ],
-  "upstream_rules_commit": "b1bfe454d37db2838ef76756830aeb23c40de95e"
+  "upstream_rules_commit": "b1bfe454d37db2838ef76756830aeb23c40de95e",
+  "verified_checkout": "4b0076ece6b77c470d676702fe037049076ac999",
+  "manuscript_version": "11 November 2026, final pre-submission bibliography revision"
 }

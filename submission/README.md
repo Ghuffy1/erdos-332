@@ -1,8 +1,8 @@
-# Private submission materials
+# Submission materials
 
 The current route is the legacy contribution-PR process. JSP-000276 is absent from the 50-problem MathDB pilot register at official revision `b1bfe454d37db2838ef76756830aeb23c40de95e`.
 
-This directory is preparation material. The owner authorizes publication and submission separately.
+The owner has authorized release and the contribution submission following final verification. Individual award claims follow the official process after the required contribution PR merge.
 
 ## Materials
 

@@ -56,7 +56,7 @@ A set $S\subseteq\Z$ is \emph{syndetic} if some positive integer $M$ satisfies
 \begin{equation}\label{eq:syndetic}
 S\cap[z,z+M)\ne\varnothing\qquad(z\in\Z).
 \end{equation}
-We call such an $M$ a gap bound. Erd\H{o}s and Graham asked for conditions ensuring this property for $\D(A)$, and also considered finite intersections of recurrent difference sets \cite[p.~50]{EG}. Positive upper Banach density is a classical sufficient condition, including for finite intersections \cite{Ruzsa}. Sparse sufficient conditions arise in the work of Leth and Goldbring--Leth \cite{Leth,GL}. The conditions below concern the steps, lengths, overlap, and relative positions of finite progression pairs.
+We call such an $M$ a gap bound. Erd\H{o}s and Graham asked for conditions ensuring this property for $\D(A)$, and also considered finite intersections of recurrent difference sets \cite[p.~50]{EG}. Positive upper Banach density is a classical sufficient condition, including for finite intersections \cite{ST,Ruzsa}. Sparse sufficient conditions arise in the work of Leth and Goldbring--Leth \cite{Leth,GL}. The conditions below concern the steps, lengths, overlap, and relative positions of finite progression pairs.
 
 Fix $g\in\N$. For each $n\ge1$, let
 \begin{equation}\label{eq:models}
@@ -334,6 +334,8 @@ If $M$ is a gap bound for the intersection, each interval $[jM,(j+1)M)$, $j\ge1$
 
 \section{Separated models and zero-density examples}
 
+Separated-pair realizations are discussed in \cite{EPAD}, and recurring-template conditions in \cite{Botnet}.
+
 \begin{proposition}\label{prop:separated}
 Suppose $A=\bigcup_n(P_n\cup Q_n)\subseteq\N$ is an exact union, the block hulls are ordered with successive gaps tending to infinity, and \eqref{eq:standing} holds. Suppose also that $\len(I_n\cap J_n)\ge\delta M_n$ for every sufficiently large $n$, for some $\delta>0$. Then
 \[
@@ -480,7 +482,7 @@ These open sets are disjoint. The two recurrent difference sets are individually
 
 \section{Reciprocal divergence}
 
-Reciprocal divergence by itself does not force a nonzero recurrent difference. An elementary example is
+Reciprocal divergence by itself does not force a nonzero recurrent difference. An elementary example, also recorded in the note of Plasma AI \cite{Plasma}, is
 \begin{equation}\label{eq:harmonic}
 a_m=m\bigl(1+\lfloor\log_2m\rfloor\bigr),\qquad m\ge1.
 \end{equation}
@@ -507,6 +509,7 @@ Every inserted step and every gap between the enlarged pieces tends to infinity.
 \section*{Acknowledgments}
 The authors acknowledge AI assistance from OpenAI's ChatGPT in developing and reviewing the arguments and preparing the mathematical exposition.
 
+\clearpage
 \begin{thebibliography}{9}
 \raggedright
 \bibitem{EG}
@@ -530,5 +533,29 @@ Studia Logica \textbf{47} (1988), no.~3, 265--278.
 I. Z. Ruzsa,
 \emph{On difference sets},
 Studia Scientiarum Mathematicarum Hungarica \textbf{13} (1978), 319--326.
+
+\bibitem{ST}
+C. L. Stewart and R. Tijdeman,
+\emph{On infinite-difference sets},
+Canadian Journal of Mathematics \textbf{31} (1979), no.~5, 897--910.
+\href{https://doi.org/10.4153/CJM-1979-085-6}{doi:10.4153/CJM-1979-085-6}.
+
+\bibitem{EPAD}
+Erd\H{o}s Problem a Day,
+\emph{Erd\H{o}s problem \#332: live audit and a sharp upper-Banach-density boundary},
+working report, 28 July 2026, Sections 3--4.
+\href{https://www.erdosproblemaday.com/report/332}{erdosproblemaday.com/report/332}.
+
+\bibitem{Botnet}
+jeremy-math-332-worker,
+\emph{Fixed-template discussion for Erd\H{o}s \#332},
+Botnet, 29 September 2026.
+\href{https://botnet.com/topics/af009ddc-ed6e-43c1-9bce-a76d1ed84aa0}{botnet.com, Erd\H{o}s \#332 discussion}.
+
+\bibitem{Plasma}
+Plasma AI,
+\emph{Recurrent difference sets}, research note, accessed 11 November 2026.
+\href{https://erdosproblems.ai/wiki/research/recurrent_difference_sets}{erdosproblems.ai, Recurrent difference sets}.
+
 \end{thebibliography}
 \end{document}
