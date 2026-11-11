@@ -1,0 +1,365 @@
+{
+  "source_commit": "6d65e28f986b8434d9448e6e4ba73e7ddd17ef43",
+  "repository": "https://github.com/Ghuffy1/erdos-332",
+  "branch": "main",
+  "problem": "Erdos 332",
+  "jsp": "JSP-000276",
+  "original_statement": "https://github.com/google-deepmind/formal-conjectures/blob/4b5e5275a2734adace65d6c0a87e5bb508dc0363/FormalConjectures/ErdosProblems/332.lean",
+  "targets": [
+    {
+      "name": "Erdos332.main_bounded_contact",
+      "file": "Erdos332.lean",
+      "line": 1061,
+      "requirement": "Manuscript Theorem 1.1(1), bounded-contact sufficient condition."
+    },
+    {
+      "name": "Erdos332.main_finite_test",
+      "file": "Erdos332.lean",
+      "line": 1077,
+      "requirement": "Manuscript Theorem 1.1(2), exact 2*g*H+4*C bound including equality."
+    },
+    {
+      "name": "Erdos332.centered_finite_intersection",
+      "file": "Erdos332.lean",
+      "line": 1138,
+      "requirement": "Syndetic-intersection conclusion of manuscript Theorem 1.2."
+    },
+    {
+      "name": "Erdos332Submission.erdos_332",
+      "file": "Submission.lean",
+      "line": 47,
+      "requirement": "Original-question implication with an explicit sufficient condition, infinite-pair recurrence and a positive natural gap bound."
+    }
+  ],
+  "all_audited_declarations": [
+    {
+      "name": "Erdos332.cross_of_index",
+      "file": "Erdos332.lean",
+      "line": 71
+    },
+    {
+      "name": "Erdos332.cross_of_common_interval",
+      "file": "Erdos332.lean",
+      "line": 91
+    },
+    {
+      "name": "Erdos332.gapCertificate.window",
+      "file": "Erdos332.lean",
+      "line": 118
+    },
+    {
+      "name": "Erdos332.inverse_transfer",
+      "file": "Erdos332.lean",
+      "line": 131
+    },
+    {
+      "name": "Erdos332.finite_gap_window",
+      "file": "Erdos332.lean",
+      "line": 139
+    },
+    {
+      "name": "Erdos332.recurring_iff_infinite_pairs",
+      "file": "Erdos332.lean",
+      "line": 207
+    },
+    {
+      "name": "Erdos332.transfer_recurring",
+      "file": "Erdos332.lean",
+      "line": 237
+    },
+    {
+      "name": "Erdos332.transfer_gapBound",
+      "file": "Erdos332.lean",
+      "line": 269
+    },
+    {
+      "name": "Erdos332.escapes_of_bases",
+      "file": "Erdos332.lean",
+      "line": 280
+    },
+    {
+      "name": "Erdos332.integer_grid_interval",
+      "file": "Erdos332.lean",
+      "line": 293
+    },
+    {
+      "name": "Erdos332.cross_occurs",
+      "file": "Erdos332.lean",
+      "line": 302
+    },
+    {
+      "name": "Erdos332.model_gap_of_finite_test",
+      "file": "Erdos332.lean",
+      "line": 308
+    },
+    {
+      "name": "Erdos332.finite_test",
+      "file": "Erdos332.lean",
+      "line": 346
+    },
+    {
+      "name": "Erdos332.gapBound_nearby",
+      "file": "Erdos332.lean",
+      "line": 364
+    },
+    {
+      "name": "Erdos332.gapBound_scale",
+      "file": "Erdos332.lean",
+      "line": 374
+    },
+    {
+      "name": "Erdos332.modelRecurring_neg",
+      "file": "Erdos332.lean",
+      "line": 384
+    },
+    {
+      "name": "Erdos332.bohr_syndetic",
+      "file": "Erdos332.lean",
+      "line": 392
+    },
+    {
+      "name": "Erdos332.gapCertificate_full_period",
+      "file": "Erdos332.lean",
+      "line": 427
+    },
+    {
+      "name": "Erdos332.maxGapNumerator_spec",
+      "file": "Erdos332.lean",
+      "line": 438
+    },
+    {
+      "name": "Erdos332.maxGapNumerator_min",
+      "file": "Erdos332.lean",
+      "line": 446
+    },
+    {
+      "name": "Erdos332.gapCertificate_iff_real_cover",
+      "file": "Erdos332.lean",
+      "line": 456
+    },
+    {
+      "name": "Erdos332.offset_identity",
+      "file": "Erdos332.lean",
+      "line": 484
+    },
+    {
+      "name": "Erdos332.canonicalFiniteTest_implies",
+      "file": "Erdos332.lean",
+      "line": 496
+    },
+    {
+      "name": "Erdos332.centeredResidue_mod",
+      "file": "Erdos332.lean",
+      "line": 511
+    },
+    {
+      "name": "Erdos332.centeredResidue_norm",
+      "file": "Erdos332.lean",
+      "line": 516
+    },
+    {
+      "name": "Erdos332.int_eq_zero_of_dvd_abs_lt",
+      "file": "Erdos332.lean",
+      "line": 530
+    },
+    {
+      "name": "Erdos332.anchor_interval",
+      "file": "Erdos332.lean",
+      "line": 537
+    },
+    {
+      "name": "Erdos332.move_inside",
+      "file": "Erdos332.lean",
+      "line": 560
+    },
+    {
+      "name": "Erdos332.cross_small_shift",
+      "file": "Erdos332.lean",
+      "line": 576
+    },
+    {
+      "name": "Erdos332.modelRecurring_subsequence",
+      "file": "Erdos332.lean",
+      "line": 619
+    },
+    {
+      "name": "Erdos332.gapBound_mono",
+      "file": "Erdos332.lean",
+      "line": 627
+    },
+    {
+      "name": "Erdos332.anchored_convergent_near_bohr",
+      "file": "Erdos332.lean",
+      "line": 633
+    },
+    {
+      "name": "Erdos332.anchored_model_syndetic",
+      "file": "Erdos332.lean",
+      "line": 679
+    },
+    {
+      "name": "Erdos332.width_eq_window",
+      "file": "Erdos332.lean",
+      "line": 712
+    },
+    {
+      "name": "Erdos332.windowWidth_shift",
+      "file": "Erdos332.lean",
+      "line": 716
+    },
+    {
+      "name": "Erdos332.anchored_width_lower",
+      "file": "Erdos332.lean",
+      "line": 730
+    },
+    {
+      "name": "Erdos332.cross_base",
+      "file": "Erdos332.lean",
+      "line": 746
+    },
+    {
+      "name": "Erdos332.eventual_anchored_width",
+      "file": "Erdos332.lean",
+      "line": 752
+    },
+    {
+      "name": "Erdos332.bounded_contact_model",
+      "file": "Erdos332.lean",
+      "line": 777
+    },
+    {
+      "name": "Erdos332.bounded_contact",
+      "file": "Erdos332.lean",
+      "line": 804
+    },
+    {
+      "name": "Erdos332.common_point_bohr_subset",
+      "file": "Erdos332.lean",
+      "line": 819
+    },
+    {
+      "name": "Erdos332.finite_positive_lower",
+      "file": "Erdos332.lean",
+      "line": 853
+    },
+    {
+      "name": "Erdos332.finite_common_point_intersection",
+      "file": "Erdos332.lean",
+      "line": 872
+    },
+    {
+      "name": "Erdos332.affine_min",
+      "file": "Erdos332.lean",
+      "line": 917
+    },
+    {
+      "name": "Erdos332.affine_max",
+      "file": "Erdos332.lean",
+      "line": 923
+    },
+    {
+      "name": "Erdos332.hullOverlap_eq_window",
+      "file": "Erdos332.lean",
+      "line": 929
+    },
+    {
+      "name": "Erdos332.overlap_implies_originalWidth",
+      "file": "Erdos332.lean",
+      "line": 961
+    },
+    {
+      "name": "Erdos332.bounded_contact_hulls",
+      "file": "Erdos332.lean",
+      "line": 981
+    },
+    {
+      "name": "Erdos332.translated_overlap_implies_width",
+      "file": "Erdos332.lean",
+      "line": 996
+    },
+    {
+      "name": "Erdos332.finiteHullTest_implies",
+      "file": "Erdos332.lean",
+      "line": 1014
+    },
+    {
+      "name": "Erdos332.finite_test_hulls",
+      "file": "Erdos332.lean",
+      "line": 1029
+    },
+    {
+      "name": "Erdos332.inverse_of_coprime",
+      "file": "Erdos332.lean",
+      "line": 1040
+    },
+    {
+      "name": "Erdos332.escapes_of_min_bases",
+      "file": "Erdos332.lean",
+      "line": 1045
+    },
+    {
+      "name": "Erdos332.main_bounded_contact",
+      "file": "Erdos332.lean",
+      "line": 1061
+    },
+    {
+      "name": "Erdos332.main_finite_test",
+      "file": "Erdos332.lean",
+      "line": 1077
+    },
+    {
+      "name": "Erdos332.centeredBlock_cross",
+      "file": "Erdos332.lean",
+      "line": 1097
+    },
+    {
+      "name": "Erdos332.centeredBlock_width",
+      "file": "Erdos332.lean",
+      "line": 1104
+    },
+    {
+      "name": "Erdos332.centered_finite_intersection",
+      "file": "Erdos332.lean",
+      "line": 1138
+    },
+    {
+      "name": "Erdos332Submission.recurrentDifferences_eq",
+      "file": "Submission.lean",
+      "line": 35
+    },
+    {
+      "name": "Erdos332Submission.natural_gap_bound",
+      "file": "Submission.lean",
+      "line": 40
+    },
+    {
+      "name": "Erdos332Submission.erdos_332",
+      "file": "Submission.lean",
+      "line": 47
+    },
+    {
+      "name": "Erdos332SubmissionCheck.representation_bridge",
+      "file": "verification/Challenge.lean",
+      "line": 15
+    },
+    {
+      "name": "Erdos332SubmissionCheck.bounded_contact_challenge",
+      "file": "verification/Challenge.lean",
+      "line": 20
+    },
+    {
+      "name": "Erdos332SubmissionCheck.finite_gap_challenge",
+      "file": "verification/Challenge.lean",
+      "line": 37
+    }
+  ],
+  "expected_audit_count": 64,
+  "unproved_extra_assumptions": [],
+  "outside_machine_checked_scope": [
+    "The separated-union classification",
+    "The zero-upper-Banach-density and other explicit examples",
+    "Sharpness constructions",
+    "The density and reciprocal-sum consequences"
+  ],
+  "original_problem_suitability": "Pending independent mathematical judgment for this open-ended question."
+}

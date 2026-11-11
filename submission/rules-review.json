@@ -1,0 +1,48 @@
+{
+  "checked_at_utc": "2026-11-11T15:52:44.620439+00:00",
+  "official_repository": "https://github.com/TheJustinSunPrize/awards",
+  "official_commit": "b1bfe454d37db2838ef76756830aeb23c40de95e",
+  "route": "legacy contribution PR; JSP-000276 is absent from the MathDB pilot list",
+  "files": [
+    {
+      "path": "CONTRIBUTING.md",
+      "url": "https://github.com/TheJustinSunPrize/awards/blob/b1bfe454d37db2838ef76756830aeb23c40de95e/CONTRIBUTING.md",
+      "sha256": "bf112730e08402e2a9f95e53ebadcfbb795cbeb5b8f09bd752f2778be83fada1"
+    },
+    {
+      "path": "docs/award-process.md",
+      "url": "https://github.com/TheJustinSunPrize/awards/blob/b1bfe454d37db2838ef76756830aeb23c40de95e/docs/award-process.md",
+      "sha256": "57f15383f18f9bcc30456aa385d7b9ff73aa13e052fb6a70cdfd30e3ecd4e29b"
+    },
+    {
+      "path": "docs/attribution.md",
+      "url": "https://github.com/TheJustinSunPrize/awards/blob/b1bfe454d37db2838ef76756830aeb23c40de95e/docs/attribution.md",
+      "sha256": "7127947a32e87ac766f7aa7252c741f9deb61e886259284d727d49f3bfd53f1a"
+    },
+    {
+      "path": "docs/verification.md",
+      "url": "https://github.com/TheJustinSunPrize/awards/blob/b1bfe454d37db2838ef76756830aeb23c40de95e/docs/verification.md",
+      "sha256": "1e0b6ce29b956a570338eb11c564b6e688a3176f596c0eabf01d4444973e0a9c"
+    },
+    {
+      "path": "docs/grading.md",
+      "url": "https://github.com/TheJustinSunPrize/awards/blob/b1bfe454d37db2838ef76756830aeb23c40de95e/docs/grading.md",
+      "sha256": "3cb62c94f8a18a82520db4e408a7c208dd225b51ab0024441caa372caea8a611"
+    },
+    {
+      "path": "problems/mathdb-pilot.md",
+      "url": "https://github.com/TheJustinSunPrize/awards/blob/b1bfe454d37db2838ef76756830aeb23c40de95e/problems/mathdb-pilot.md",
+      "sha256": "a46f60232e5d0063c07530d3c55949fd43579ceed389cdbba14c02d5d83af5f2"
+    },
+    {
+      "path": ".github/PULL_REQUEST_TEMPLATE.md",
+      "url": "https://github.com/TheJustinSunPrize/awards/blob/b1bfe454d37db2838ef76756830aeb23c40de95e/.github/PULL_REQUEST_TEMPLATE.md",
+      "sha256": "bfeaaf4a5a2d489049cdb642c7b60fd868fd9bee6559437f2513b0d224a8aa5d"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/claim-award.yml",
+      "url": "https://github.com/TheJustinSunPrize/awards/blob/b1bfe454d37db2838ef76756830aeb23c40de95e/.github/ISSUE_TEMPLATE/claim-award.yml",
+      "sha256": "ca31996bd0127e921957904db7b64a36cd0e641f3837a4b29d36ce990c336fea"
+    }
+  ]
+}

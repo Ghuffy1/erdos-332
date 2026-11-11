@@ -1,0 +1,47 @@
+{
+  "repository": "https://github.com/Ghuffy1/erdos-332",
+  "owner": "Ghuffy1",
+  "branch": "main",
+  "proof_commit": "6d65e28f986b8434d9448e6e4ba73e7ddd17ef43",
+  "problem": {
+    "erdos": 332,
+    "jsp": "JSP-000276",
+    "original_source": "https://mathweb.ucsd.edu/~ronspubs/80_11_number_theory.pdf",
+    "original_location": "printed page 50",
+    "maintained_statement_commit": "4b5e5275a2734adace65d6c0a87e5bb508dc0363",
+    "maintained_statement_path": "FormalConjectures/ErdosProblems/332.lean"
+  },
+  "files": {
+    "Erdos332.lean": {
+      "bytes": 53438,
+      "sha256": "b984315b7dd72267d3f226ef6b6ee09ffd11d636a944378e0c5d90bc2e782b07"
+    },
+    "Submission.lean": {
+      "bytes": 2612,
+      "sha256": "16bec06badfd4db074bc925f1e20e7cb08257f8da5162e9529410eb4e1d164ad"
+    },
+    "paper/recurring_differences.pdf": {
+      "bytes": 123700,
+      "sha256": "044f491d87c80a1a74a007b754eefb17fd2428bdacc473c5b473442bbfd0c9b7"
+    },
+    "paper/recurring_differences.tex": {
+      "bytes": 30868,
+      "sha256": "7ad6034e6b4531c71ab482b4531d3c311d10c5709195fd405897f30d26a6ea8e"
+    },
+    "lake-manifest.json": {
+      "bytes": 3542,
+      "sha256": "0ba42a7c968c1d028f6ef886113af09ee1c73f42b214c59745af6642db5f82ec"
+    },
+    "lean-toolchain": {
+      "bytes": 25,
+      "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+    }
+  },
+  "main_target": "Erdos332Submission.erdos_332",
+  "other_targets": [
+    "Erdos332.main_bounded_contact",
+    "Erdos332.main_finite_test",
+    "Erdos332.centered_finite_intersection"
+  ],
+  "upstream_rules_commit": "b1bfe454d37db2838ef76756830aeb23c40de95e"
+}

@@ -1,0 +1,174 @@
+{
+  "official_rules_commit": "b1bfe454d37db2838ef76756830aeb23c40de95e",
+  "repository": "Ghuffy1/erdos-332",
+  "requirements": [
+    {
+      "id": "R01",
+      "requirement": "Correct original problem and JSP mapping",
+      "status": "prepared",
+      "evidence": "docs/statement-correspondence.md"
+    },
+    {
+      "id": "R02",
+      "requirement": "Applicable legacy or pilot route",
+      "status": "prepared",
+      "evidence": "submission/rules-review.json"
+    },
+    {
+      "id": "R03",
+      "requirement": "Complete mathematical manuscript supplied",
+      "status": "prepared",
+      "evidence": "paper/recurring_differences.pdf"
+    },
+    {
+      "id": "R04",
+      "requirement": "Explicit original-question implication",
+      "status": "prepared",
+      "evidence": "Submission.lean"
+    },
+    {
+      "id": "R05",
+      "requirement": "Positive natural gap-bound and infinite-pair bridges",
+      "status": "prepared",
+      "evidence": "Submission.lean; verification/Challenge.lean"
+    },
+    {
+      "id": "R06",
+      "requirement": "Pinned toolchain and all dependencies",
+      "status": "prepared",
+      "evidence": "lean-toolchain; lake-manifest.json"
+    },
+    {
+      "id": "R07",
+      "requirement": "Clean build and all target checks",
+      "status": "passed",
+      "evidence": "verification/report.md; verification/evidence/"
+    },
+    {
+      "id": "R08",
+      "requirement": "Full transitive axiom audit",
+      "status": "passed",
+      "evidence": "verification/report.md; verification/evidence/"
+    },
+    {
+      "id": "R09",
+      "requirement": "Fresh kernel replay",
+      "status": "passed",
+      "evidence": "verification/report.md; verification/evidence/"
+    },
+    {
+      "id": "R10",
+      "requirement": "Hosted CI at the selected revision",
+      "status": "passed",
+      "evidence": "verification/report.md; verification/evidence/"
+    },
+    {
+      "id": "R11",
+      "requirement": "Owner and four equal contribution credits",
+      "status": "prepared",
+      "evidence": "AUTHORS.md; CITATION.cff"
+    },
+    {
+      "id": "R12",
+      "requirement": "AI assistance disclosed",
+      "status": "prepared",
+      "evidence": "AUTHORS.md; paper/recurring_differences.pdf"
+    },
+    {
+      "id": "R13",
+      "requirement": "Contribution PR contains all template sections",
+      "status": "prepared draft pending evidence pin",
+      "evidence": "submission/contribution-pr.md"
+    },
+    {
+      "id": "R14",
+      "requirement": "Catalog-only patch and protected eligibility fields",
+      "status": "prepared and application-checked",
+      "evidence": "submission/awards.patch"
+    },
+    {
+      "id": "R15",
+      "requirement": "Related submissions and mathematical prior work",
+      "status": "prepared",
+      "evidence": "docs/prior-work.md"
+    },
+    {
+      "id": "R16",
+      "requirement": "Four unsigned personal claim drafts",
+      "status": "prepared",
+      "evidence": "submission/claims/"
+    },
+    {
+      "id": "R17",
+      "requirement": "Third-party notices and retained licenses",
+      "status": "prepared",
+      "evidence": "THIRD_PARTY_NOTICES.md; licenses/"
+    },
+    {
+      "id": "R18",
+      "requirement": "Private visibility and correct repository owner",
+      "status": "prepared",
+      "evidence": "https://github.com/Ghuffy1/erdos-332"
+    },
+    {
+      "id": "R19",
+      "requirement": "Publication and submission authorization",
+      "status": "pending owner action",
+      "evidence": "submission/readiness.md"
+    },
+    {
+      "id": "R20",
+      "requirement": "Personal claim roles and co-contributor repository eligibility",
+      "status": "pending claimant and maintainer review",
+      "evidence": "submission/claims/; AUTHORS.md"
+    },
+    {
+      "id": "R21",
+      "requirement": "Independent full-problem mathematical acceptance",
+      "status": "pending prize review",
+      "evidence": "docs/statement-correspondence.md"
+    },
+    {
+      "id": "R22",
+      "requirement": "Formal coverage accepted by maintainers",
+      "status": "pending prize review",
+      "evidence": "verification/report.md"
+    },
+    {
+      "id": "R23",
+      "requirement": "Public priority and attribution determination",
+      "status": "pending prize review",
+      "evidence": "docs/prior-work.md; AUTHORS.md"
+    },
+    {
+      "id": "R24",
+      "requirement": "Required contribution PR merge",
+      "status": "pending authorized public submission",
+      "evidence": "submission/contribution-pr.md"
+    },
+    {
+      "id": "R25",
+      "requirement": "Individual identity confirmation and signed declarations",
+      "status": "pending individual applicants",
+      "evidence": "submission/identity-instructions.md"
+    },
+    {
+      "id": "R26",
+      "requirement": "Candidate notice and applicable full public-review period",
+      "status": "pending prize process",
+      "evidence": "submission/readiness.md"
+    },
+    {
+      "id": "R27",
+      "requirement": "Recipient confirmation and award decision",
+      "status": "pending prize process",
+      "evidence": "submission/readiness.md"
+    },
+    {
+      "id": "R28",
+      "requirement": "Private-history and secret scan",
+      "status": "pending final audit",
+      "evidence": "submission/final-audit.json"
+    }
+  ]
+}

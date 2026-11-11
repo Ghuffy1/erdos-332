@@ -1,0 +1,66 @@
+verify	Check statements, axioms, dependencies, and fresh kernel replay	﻿2026-11-11T15:56:05.0257717Z ##[group]Run python3 scripts/verify.py --kernel-replay
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:05.0258179Z ^[[36;1mpython3 scripts/verify.py --kernel-replay^[[0m
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:05.0747145Z shell: /usr/bin/bash -e {0}
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:05.0747494Z env:
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:05.0747751Z   LEAN_NUM_THREADS: 2
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:05.0748016Z ##[endgroup]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:05.2093978Z Running lake build
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6182405Z 
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6183514Z Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6185083Z warning: Erdos332.lean:404:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6186521Z warning: Erdos332.lean:444:26: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6187785Z warning: Erdos332.lean:450:26: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6189278Z warning: Erdos332.lean:530:43: Variable name `hq` is not explicitly referenced.
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6190167Z 
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6191293Z Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6192808Z   [apply] _hq
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6193162Z 
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6194151Z Note: This linter can be disabled with `set_option linter.unusedVariables false`
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6195436Z warning: Erdos332.lean:606:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6196264Z 
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6196865Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6198129Z warning: Erdos332.lean:613:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6198910Z 
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6199727Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6200638Z Build completed successfully (1898 jobs).
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:09.6201234Z Running lake env lean verification/Audit.lean
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6560962Z 'Erdos332.common_point_bohr_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6562892Z 'Erdos332.finite_positive_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6564417Z 'Erdos332.finite_common_point_intersection' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6565715Z 'Erdos332.affine_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6567244Z 'Erdos332.affine_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6568831Z 'Erdos332.hullOverlap_eq_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6571014Z 'Erdos332.overlap_implies_originalWidth' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6572824Z 'Erdos332.bounded_contact_hulls' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6574191Z 'Erdos332.translated_overlap_implies_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6575598Z 'Erdos332.finiteHullTest_implies' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6576864Z 'Erdos332.finite_test_hulls' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6578072Z 'Erdos332.inverse_of_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6580157Z 'Erdos332.escapes_of_min_bases' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6581501Z 'Erdos332.main_bounded_contact' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6582739Z 'Erdos332.main_finite_test' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6583845Z 'Erdos332.centeredBlock_cross' depends on axioms: [propext, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6585001Z 'Erdos332.centeredBlock_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6586366Z 'Erdos332.centered_finite_intersection' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:15.6587942Z Running lake env lean verification/Challenge.lean
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3436556Z Erdos332SubmissionCheck.bounded_contact_challenge {A : Set ℕ} {g C K : ℤ} {δ : ℝ} {B : ℕ → Erdos332.Block} (hg : 0 < g)
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3442057Z   (hC : 0 ≤ C) (hδ : 0 < δ) (hp : ∀ (n : ℕ), 0 < (B n).p) (hq : ∀ (n : ℕ), 0 < (B n).q)
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3443273Z   (hcop : ∀ (n : ℕ), IsCoprime (B n).p (B n).q) (hpinf : Tendsto (fun n => (B n).p) atTop atTop)
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3444897Z   (hqinf : Tendsto (fun n => (B n).q) atTop atTop) (hbases : Tendsto (fun n => min (B n).a (B n).b) atTop atTop)
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3445855Z   (ha : Erdos332.approximates A g C B)
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3446423Z   (hgood :
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3446938Z     ∃ᶠ (n : ℕ) in atTop,
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3447905Z       δ ≤ Erdos332.hullOverlap g (B n) / (↑g * ↑(B n).p * ↑(B n).q) ∧ ∃ r, |r| ≤ K ∧ Erdos332.cross g (B n) r) :
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3448951Z   BoundedGaps {d | InfiniteRepresentations A d}
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3450552Z Erdos332SubmissionCheck.finite_gap_challenge {A : Set ℕ} {g C : ℤ} {H : ℕ} {B : ℕ → Erdos332.Block} (hg : 0 < g)
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3451843Z   (hC : 0 ≤ C) (hH : 0 < H) (hp : ∀ (n : ℕ), 0 < (B n).p) (hq : ∀ (n : ℕ), 0 < (B n).q)
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3453320Z   (hpinf : Tendsto (fun n => (B n).p) atTop atTop) (hqinf : Tendsto (fun n => (B n).q) atTop atTop)
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3454498Z   (hbases : Tendsto (fun n => min (B n).a (B n).b) atTop atTop) (ha : Erdos332.approximates A g C B)
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3455649Z   (hgood : ∃ᶠ (n : ℕ) in atTop, Erdos332.finiteHullTest g H (B n)) :
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3456797Z   0 < 2 * g * ↑H + 4 * C ∧ ∀ (z : ℤ), ∃ d, InfiniteRepresentations A d ∧ z ≤ d ∧ d < z + (2 * g * ↑H + 4 * C)
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3458222Z 'Erdos332SubmissionCheck.representation_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3460165Z 'Erdos332SubmissionCheck.bounded_contact_challenge' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.3461509Z 'Erdos332SubmissionCheck.finite_gap_challenge' depends on axioms: [propext, Classical.choice, Quot.sound]
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T15:56:18.6538387Z Running lake env leanchecker --fresh --verbose Submission
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T16:00:22.9955878Z replaying Submission with --fresh
+verify	Check statements, axioms, dependencies, and fresh kernel replay	2026-11-11T16:00:22.9958662Z PASS for declared formal targets

@@ -10,3 +10,7 @@ The mathematical and formal proof source in this repository was prepared as the 
 - The GitHub workflow references pinned upstream actions. Their implementations retain their upstream licenses.
 
 The mathematical references in the manuscript and prior-work document retain their respective authorship and publication rights.
+
+Copies of the Apache-2.0 text and the upstream JSP content-license notice are retained under `licenses/`.
+
+The adapted template text in `submission/contribution-pr.md`, `submission/claims/`, and `submission/awards.patch` carries the CC BY 4.0 attribution and license of its upstream material. That notice governs those adapted texts. The rights notice for the authors' mathematical manuscript and original formal proof is separate.

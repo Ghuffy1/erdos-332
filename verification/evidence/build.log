@@ -1,0 +1,27 @@
+⚠ [1895/1898] Replayed Erdos332
+warning: Erdos332.lean:72:5: Variable name `hp` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hp
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos332.lean:160:4: try 'simp' instead of 'simpa'
+
+Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+warning: Erdos332.lean:404:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Erdos332.lean:444:26: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Erdos332.lean:450:26: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+warning: Erdos332.lean:530:43: Variable name `hq` is not explicitly referenced.
+
+Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+  [apply] _hq
+
+Note: This linter can be disabled with `set_option linter.unusedVariables false`
+warning: Erdos332.lean:606:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+warning: Erdos332.lean:613:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+
+Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+✔ [1897/1898] Built Submission (9.5s)
+Build completed successfully (1898 jobs).

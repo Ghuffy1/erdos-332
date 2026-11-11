@@ -1,0 +1,18 @@
+Erdos332SubmissionCheck.bounded_contact_challenge {A : Set ℕ} {g C K : ℤ} {δ : ℝ} {B : ℕ → Erdos332.Block} (hg : 0 < g)
+  (hC : 0 ≤ C) (hδ : 0 < δ) (hp : ∀ (n : ℕ), 0 < (B n).p) (hq : ∀ (n : ℕ), 0 < (B n).q)
+  (hcop : ∀ (n : ℕ), IsCoprime (B n).p (B n).q) (hpinf : Tendsto (fun n => (B n).p) atTop atTop)
+  (hqinf : Tendsto (fun n => (B n).q) atTop atTop) (hbases : Tendsto (fun n => min (B n).a (B n).b) atTop atTop)
+  (ha : Erdos332.approximates A g C B)
+  (hgood :
+    ∃ᶠ (n : ℕ) in atTop,
+      δ ≤ Erdos332.hullOverlap g (B n) / (↑g * ↑(B n).p * ↑(B n).q) ∧ ∃ r, |r| ≤ K ∧ Erdos332.cross g (B n) r) :
+  BoundedGaps {d | InfiniteRepresentations A d}
+Erdos332SubmissionCheck.finite_gap_challenge {A : Set ℕ} {g C : ℤ} {H : ℕ} {B : ℕ → Erdos332.Block} (hg : 0 < g)
+  (hC : 0 ≤ C) (hH : 0 < H) (hp : ∀ (n : ℕ), 0 < (B n).p) (hq : ∀ (n : ℕ), 0 < (B n).q)
+  (hpinf : Tendsto (fun n => (B n).p) atTop atTop) (hqinf : Tendsto (fun n => (B n).q) atTop atTop)
+  (hbases : Tendsto (fun n => min (B n).a (B n).b) atTop atTop) (ha : Erdos332.approximates A g C B)
+  (hgood : ∃ᶠ (n : ℕ) in atTop, Erdos332.finiteHullTest g H (B n)) :
+  0 < 2 * g * ↑H + 4 * C ∧ ∀ (z : ℤ), ∃ d, InfiniteRepresentations A d ∧ z ≤ d ∧ d < z + (2 * g * ↑H + 4 * C)
+'Erdos332SubmissionCheck.representation_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332SubmissionCheck.bounded_contact_challenge' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332SubmissionCheck.finite_gap_challenge' depends on axioms: [propext, Classical.choice, Quot.sound]
