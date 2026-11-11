@@ -11,6 +11,7 @@ This directory is preparation material. The owner authorizes publication and sub
 - `claims/` contains one unsigned award-claim draft for each contributor. Each applicant must submit through their own account after the contribution PR has merged, subject to the applicable rules.
 - `requirements.json` and `readiness.md` map the official requirements to evidence and outstanding external actions.
 - `source-record.json` pins the original problem, manuscript, formal source revision, and technical checks.
+- [Final preparation audit](final-audit.json) records 27 completed checks covering the package, exact source, author metadata, official forms, catalog patch, repository visibility, and private-material scan.
 
 ## Release sequence
 

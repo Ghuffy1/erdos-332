@@ -38,6 +38,6 @@ The repository is prepared for private review. Publication and submission requir
 
 OpenAI's ChatGPT assisted the mathematical development, checking, exposition, formalization, and repository preparation. The equal-contribution designation and account mapping were supplied by the owner. Each contributor's personal confirmation remains part of the attribution process.
 
-The work was developed privately before preparation of this repository. The source provenance record links the exact prior local proof bytes. A private commit timestamp supplies provenance information; independently corroborated public history is required for a public priority determination.
+The work was developed privately before preparation of this repository. The source provenance record links the exact prior local proof bytes. A private commit timestamp supplies provenance information. Independently corroborated public history is required for a public priority determination.
 
 Authored material is reserved for private review under the [rights notice](LICENSE). [Third-party notices](THIRD_PARTY_NOTICES.md) identify the licenses and origins of dependencies and adapted submission formats.

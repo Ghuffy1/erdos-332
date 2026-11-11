@@ -4,4 +4,4 @@ After an eligible claim issue is opened, each applicant sends their own email fr
 
 The prize team verifies the account-to-author connection and may issue a fresh challenge. Personal confirmation and recipient decisions are supplied by the actual applicant and the prize team. Keep identity documents, payment information, delivery addresses, and completed private confirmations in the official email process.
 
-The lead contribution submitter is Ghuffy1. Each named co-contributor submits their own award claim. The repository records equal contribution credit; the prize team determines recipient eligibility and any applicable arrangements.
+The lead contribution submitter is Ghuffy1. Each named co-contributor submits their own award claim. The repository records equal contribution credit. The prize team determines recipient eligibility and any applicable arrangements.

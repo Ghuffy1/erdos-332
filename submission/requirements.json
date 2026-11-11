@@ -77,7 +77,7 @@
     {
       "id": "R13",
       "requirement": "Contribution PR contains all template sections",
-      "status": "prepared draft pending evidence pin",
+      "status": "passed",
       "evidence": "submission/contribution-pr.md"
     },
     {
@@ -167,7 +167,7 @@
     {
       "id": "R28",
       "requirement": "Private-history and secret scan",
-      "status": "pending final audit",
+      "status": "passed",
       "evidence": "submission/final-audit.json"
     }
   ]

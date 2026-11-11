@@ -1,0 +1,186 @@
+{
+  "checked_at_utc": "2026-11-11T16:11:47.128381+00:00",
+  "repository": "https://github.com/Ghuffy1/erdos-332",
+  "proof_commit": "6d65e28f986b8434d9448e6e4ba73e7ddd17ef43",
+  "evidence_commit": "782f2dcf1105c4ddc3ecde89120d8e78a535b57a",
+  "official_rules_commit": "b1bfe454d37db2838ef76756830aeb23c40de95e",
+  "verdict": "PASS for private preparation checks",
+  "checks": [
+    {
+      "check": "required_submission_materials",
+      "passed": true,
+      "detail": {
+        "missing": []
+      }
+    },
+    {
+      "check": "generated_dependencies_and_archives_excluded",
+      "passed": true
+    },
+    {
+      "check": "working_tree_secret_and_private_path_scan",
+      "passed": true,
+      "detail": {
+        "hits": []
+      }
+    },
+    {
+      "check": "local_markdown_links",
+      "passed": true,
+      "detail": {
+        "broken": []
+      }
+    },
+    {
+      "check": "entire_reachable_history_secret_and_private_path_scan",
+      "passed": true,
+      "detail": {
+        "revisions": 4,
+        "unique_blobs": 53,
+        "hits": []
+      }
+    },
+    {
+      "check": "citation_schema",
+      "passed": true,
+      "detail": {
+        "schema": "https://raw.githubusercontent.com/citation-file-format/citation-file-format/1.2.0/schema.json",
+        "schema_sha256": "0b8d22140da702d766df318dcff3a91af2f39521298dcf36d76315fd99cc169b"
+      }
+    },
+    {
+      "check": "four_authors_surname_order_and_account_mapping",
+      "passed": true
+    },
+    {
+      "check": "manuscript_pages_authors_and_acknowledgment",
+      "passed": true,
+      "detail": {
+        "pages": 9,
+        "authors": [
+          "Will Howe",
+          "Grant Huffman",
+          "Jensen Kohlmeyer",
+          "Liam Kruer"
+        ],
+        "acknowledgment": "OpenAI's ChatGPT"
+      }
+    },
+    {
+      "check": "manuscript_remains_proof_only",
+      "passed": true
+    },
+    {
+      "check": "manuscript_proof_and_configuration_hashes",
+      "passed": true,
+      "detail": {
+        "mismatches": []
+      }
+    },
+    {
+      "check": "checked_source_unchanged_since_proof_revision",
+      "passed": true,
+      "detail": {
+        "proof_commit": "6d65e28f986b8434d9448e6e4ba73e7ddd17ef43"
+      }
+    },
+    {
+      "check": "local_build_and_fresh_kernel_replay",
+      "passed": true
+    },
+    {
+      "check": "all_64_declared_targets_audited",
+      "passed": true
+    },
+    {
+      "check": "hosted_linux_verification",
+      "passed": true,
+      "detail": {
+        "url": "https://github.com/Ghuffy1/erdos-332/actions/runs/43052549499"
+      }
+    },
+    {
+      "check": "all_target_line_references",
+      "passed": true,
+      "detail": {
+        "mismatches": []
+      }
+    },
+    {
+      "check": "official_rule_snapshot_hashes",
+      "passed": true,
+      "detail": {
+        "mismatches": []
+      }
+    },
+    {
+      "check": "official_rules_still_current",
+      "passed": true,
+      "detail": {
+        "commit": "b1bfe454d37db2838ef76756830aeb23c40de95e"
+      }
+    },
+    {
+      "check": "legacy_route",
+      "passed": true
+    },
+    {
+      "check": "catalog_patch_applies_to_current_official_snapshot",
+      "passed": true
+    },
+    {
+      "check": "catalog_only_and_permitted_fields",
+      "passed": true
+    },
+    {
+      "check": "contribution_template_sections_and_exact_references",
+      "passed": true,
+      "detail": {
+        "missing_sections": []
+      }
+    },
+    {
+      "check": "four_unsigned_personal_claims_match_official_form",
+      "passed": true,
+      "detail": {
+        "issues": []
+      }
+    },
+    {
+      "check": "contribution_draft_has_no_unresolved_template_markers",
+      "passed": true
+    },
+    {
+      "check": "github_owner_and_private_visibility",
+      "passed": true
+    },
+    {
+      "check": "repository_unavailable_to_anonymous_request",
+      "passed": true,
+      "detail": {
+        "http_status": 404
+      }
+    },
+    {
+      "check": "remote_proof_source_matches_checked_blob",
+      "passed": true
+    },
+    {
+      "check": "proof_commit_retained_on_named_branch",
+      "passed": true
+    }
+  ],
+  "pending_external_steps": [
+    "Owner authorization for public release and submission",
+    "Personal contribution-role and identity confirmations",
+    "Maintainer decision on full-problem mathematical suitability and formal coverage",
+    "Independent priority and attribution determination",
+    "Contribution PR review and merge, individual claims, candidate notice and review period",
+    "Written recipient confirmations and any award decision"
+  ],
+  "audit_limits": [
+    "Pattern-based private-material scanning supplements manual review and cannot establish absence of every possible secret.",
+    "This report records repository preparation and technical evidence. It does not establish prize acceptance or worldwide priority.",
+    "The source replay uses the pinned Lean kernel. An independent kernel implementation has not been run."
+  ]
+}
