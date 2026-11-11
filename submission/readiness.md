@@ -16,7 +16,7 @@ The original-question entry point supplies the concrete sufficient-condition pre
 
 - [x] The owner authorized public release of the repository and submission materials after final verification.
 - [ ] Confirm each contributor's role description and the intended claim categories personally.
-- [ ] Review and approve the contribution PR draft and proposed catalog patch.
+- [x] The owner authorized the reviewed contribution PR and catalog patch after final verification.
 - [ ] After the prerequisite merge, each applicant submits their own claim through their own account.
 - [ ] Each applicant sends their own identity-confirmation email and completes any fresh challenge.
 - [ ] Resolve the applicability of the original-repository ownership requirement to any co-contributor formalization claim.

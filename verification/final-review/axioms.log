@@ -1,0 +1,235 @@
+Erdos332Submission.erdos_332 (A : Set ℕ) (h : Erdos332Submission.sufficientCondition A) :
+  Erdos332Submission.HasBoundedGaps (Erdos332Submission.recurrentDifferences A)
+theorem Erdos332Submission.erdos_332 : ∀ (A : Set ℕ),
+  Erdos332Submission.sufficientCondition A →
+    Erdos332Submission.HasBoundedGaps (Erdos332Submission.recurrentDifferences A) :=
+fun A h =>
+  Exists.casesOn h fun g h =>
+    Exists.casesOn h fun C h =>
+      Exists.casesOn h fun B h =>
+        And.casesOn h fun left hcriterion =>
+          And.casesOn left fun hg right =>
+            And.casesOn right fun hC right =>
+              And.casesOn right fun hp right =>
+                And.casesOn right fun hq right =>
+                  And.casesOn right fun hcop right =>
+                    And.casesOn right fun _hL right =>
+                      And.casesOn right fun _hR right =>
+                        And.casesOn right fun hpinf right =>
+                          And.casesOn right fun hqinf right =>
+                            And.casesOn right fun hbases ha =>
+                              Erdos332Submission.natural_gap_bound
+                                (Eq.mpr
+                                  (id
+                                    (congrArg (fun _a => Erdos332.syndetic _a)
+                                      (Erdos332Submission.recurrentDifferences_eq A)))
+                                  (Or.casesOn hcriterion
+                                    (fun hcontact =>
+                                      Exists.casesOn hcontact fun K h =>
+                                        Exists.casesOn h fun δ h =>
+                                          And.casesOn h fun hδ hgood =>
+                                            Erdos332.main_bounded_contact hg hC hδ hp hq hcop hpinf hqinf hbases ha
+                                              hgood)
+                                    fun hfinite =>
+                                    Exists.casesOn hfinite fun H h =>
+                                      And.casesOn h fun hH hgood =>
+                                        Exists.intro (2 * g * ↑H + 4 * C)
+                                          (Erdos332.main_finite_test hg hC hH hp hq hpinf hqinf hbases ha hgood)))
+def Erdos332Submission.sufficientCondition : Set ℕ → Prop :=
+fun A =>
+  ∃ g C B,
+    Erdos332Submission.regularModels A g C B ∧
+      ((∃ K δ,
+          0 < δ ∧
+            ∃ᶠ (n : ℕ) in Filter.atTop,
+              δ ≤ Erdos332.hullOverlap g (B n) / (↑g * ↑(B n).p * ↑(B n).q) ∧ ∃ r, |r| ≤ K ∧ Erdos332.cross g (B n) r) ∨
+        ∃ H, 0 < H ∧ ∃ᶠ (n : ℕ) in Filter.atTop, Erdos332.finiteHullTest g H (B n))
+'Erdos332Submission.recurrentDifferences_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332Submission.natural_gap_bound' depends on axioms: [propext, Quot.sound]
+'Erdos332Submission.erdos_332' depends on axioms: [propext, Classical.choice, Quot.sound]
+Erdos332.recurring_iff_infinite_pairs (A : Set ℕ) (d : ℤ) :
+  Erdos332.recurring A d ↔ {p | p.1 ∈ A ∧ p.2 ∈ A ∧ ↑p.1 - ↑p.2 = d}.Infinite
+theorem Erdos332.recurring_iff_infinite_pairs : ∀ (A : Set ℕ) (d : ℤ),
+  Erdos332.recurring A d ↔ {p | p.1 ∈ A ∧ p.2 ∈ A ∧ ↑p.1 - ↑p.2 = d}.Infinite :=
+fun A d =>
+  let S := {p | p.1 ∈ A ∧ p.2 ∈ A ∧ ↑p.1 - ↑p.2 = d};
+  {
+    mp := fun h hfin =>
+      Exists.casesOn (Set.Finite.bddAbove (Set.Finite.image Prod.fst hfin)) fun N hN =>
+        Exists.casesOn (h (N + 1)) fun a h =>
+          And.casesOn h fun ha right =>
+            Exists.casesOn right fun b h =>
+              And.casesOn h fun hb right =>
+                And.casesOn right fun hNa hab =>
+                  have habS := ⟨ha, ⟨hb, hab⟩⟩;
+                  have this := hN (Set.mem_image_of_mem Prod.fst habS);
+                  Erdos332.recurring_iff_infinite_pairs._proof_1_1 d N a b hNa hab this,
+    mpr := fun h N =>
+      have hinj := fun ⦃a⦄ ha ⦃b⦄ hb heq =>
+        have hd₁ := ha.right.right;
+        have hd₂ := hb.right.right;
+        Prod.ext heq
+          (Decidable.byContradiction fun a_1 => Erdos332.recurring_iff_infinite_pairs._proof_1_2 d heq hd₁ hd₂ a_1);
+      have hi := Set.Infinite.image hinj h;
+      Exists.casesOn (Set.Infinite.exists_gt hi N) fun a h =>
+        And.casesOn h fun left hNa =>
+          Exists.casesOn left fun w h =>
+            Prod.casesOn (motive := fun x => x ∈ S ∧ x.1 = a → ∃ a ∈ A, ∃ b ∈ A, N ≤ a ∧ ↑a - ↑b = d) w
+              (fun u v h =>
+                And.casesOn h fun huv right =>
+                  Eq.ndrec (motive := fun a => N < a → ∃ a ∈ A, ∃ b ∈ A, N ≤ a ∧ ↑a - ↑b = d)
+                    (fun hNa =>
+                      Exists.intro u ⟨huv.left, Exists.intro v ⟨huv.right.left, ⟨le_of_lt hNa, huv.right.right⟩⟩⟩)
+                    right hNa)
+              h }
+Erdos332.main_bounded_contact {A : Set ℕ} {g C K : ℤ} {δ : ℝ} {B : ℕ → Erdos332.Block} (hg : 0 < g) (hC : 0 ≤ C)
+  (hδ : 0 < δ) (hp : ∀ (n : ℕ), 0 < (B n).p) (hq : ∀ (n : ℕ), 0 < (B n).q) (hcop : ∀ (n : ℕ), IsCoprime (B n).p (B n).q)
+  (hpinf : Filter.Tendsto (fun n => (B n).p) Filter.atTop Filter.atTop)
+  (hqinf : Filter.Tendsto (fun n => (B n).q) Filter.atTop Filter.atTop)
+  (hbases : Filter.Tendsto (fun n => min (B n).a (B n).b) Filter.atTop Filter.atTop)
+  (ha : Erdos332.approximates A g C B)
+  (hgood :
+    ∃ᶠ (n : ℕ) in Filter.atTop,
+      δ ≤ Erdos332.hullOverlap g (B n) / (↑g * ↑(B n).p * ↑(B n).q) ∧ ∃ r, |r| ≤ K ∧ Erdos332.cross g (B n) r) :
+  Erdos332.syndetic (Erdos332.differences A)
+theorem Erdos332.main_bounded_contact : ∀ {A : Set ℕ} {g C K : ℤ} {δ : ℝ} {B : ℕ → Erdos332.Block},
+  0 < g →
+    0 ≤ C →
+      0 < δ →
+        (∀ (n : ℕ), 0 < (B n).p) →
+          (∀ (n : ℕ), 0 < (B n).q) →
+            (∀ (n : ℕ), IsCoprime (B n).p (B n).q) →
+              Filter.Tendsto (fun n => (B n).p) Filter.atTop Filter.atTop →
+                Filter.Tendsto (fun n => (B n).q) Filter.atTop Filter.atTop →
+                  Filter.Tendsto (fun n => min (B n).a (B n).b) Filter.atTop Filter.atTop →
+                    Erdos332.approximates A g C B →
+                      (∃ᶠ (n : ℕ) in Filter.atTop,
+                          δ ≤ Erdos332.hullOverlap g (B n) / (↑g * ↑(B n).p * ↑(B n).q) ∧
+                            ∃ r, |r| ≤ K ∧ Erdos332.cross g (B n) r) →
+                        Erdos332.syndetic (Erdos332.differences A) :=
+fun {A} {g C K} {δ} {B} hg hC hδ hp hq hcop hpinf hqinf hbases ha hgood =>
+  (fun v hv =>
+      Erdos332.bounded_contact_hulls hg hC hδ hp hq hpinf hqinf hv ha
+        (Erdos332.escapes_of_min_bases hg (fun n => le_of_lt (hp n)) (fun n => le_of_lt (hq n)) hbases) hgood)
+    (fun n => Classical.choose ((fun n => Erdos332.inverse_of_coprime (hcop n)) n)) fun n =>
+    Classical.choose_spec ((fun n => Erdos332.inverse_of_coprime (hcop n)) n)
+Erdos332.main_finite_test {A : Set ℕ} {g C : ℤ} {H : ℕ} {B : ℕ → Erdos332.Block} (hg : 0 < g) (hC : 0 ≤ C) (hH : 0 < H)
+  (hp : ∀ (n : ℕ), 0 < (B n).p) (hq : ∀ (n : ℕ), 0 < (B n).q)
+  (hpinf : Filter.Tendsto (fun n => (B n).p) Filter.atTop Filter.atTop)
+  (hqinf : Filter.Tendsto (fun n => (B n).q) Filter.atTop Filter.atTop)
+  (hbases : Filter.Tendsto (fun n => min (B n).a (B n).b) Filter.atTop Filter.atTop)
+  (ha : Erdos332.approximates A g C B) (hgood : ∃ᶠ (n : ℕ) in Filter.atTop, Erdos332.finiteHullTest g H (B n)) :
+  Erdos332.gapBound (Erdos332.differences A) (2 * g * ↑H + 4 * C)
+theorem Erdos332.main_finite_test : ∀ {A : Set ℕ} {g C : ℤ} {H : ℕ} {B : ℕ → Erdos332.Block},
+  0 < g →
+    0 ≤ C →
+      0 < H →
+        (∀ (n : ℕ), 0 < (B n).p) →
+          (∀ (n : ℕ), 0 < (B n).q) →
+            Filter.Tendsto (fun n => (B n).p) Filter.atTop Filter.atTop →
+              Filter.Tendsto (fun n => (B n).q) Filter.atTop Filter.atTop →
+                Filter.Tendsto (fun n => min (B n).a (B n).b) Filter.atTop Filter.atTop →
+                  Erdos332.approximates A g C B →
+                    (∃ᶠ (n : ℕ) in Filter.atTop, Erdos332.finiteHullTest g H (B n)) →
+                      Erdos332.gapBound (Erdos332.differences A) (2 * g * ↑H + 4 * C) :=
+fun {A} {g C} {H} {B} hg hC hH hp hq hpinf hqinf hbases ha hgood =>
+  Erdos332.finite_test_hulls hg hC hH hp hq hpinf hqinf ha
+    (Erdos332.escapes_of_min_bases hg (fun n => le_of_lt (hp n)) (fun n => le_of_lt (hq n)) hbases) hgood
+Erdos332.centered_finite_intersection.{u_1} {ι : Type u_1} [Fintype ι] {A : ι → Set ℕ} {g : ι → ℤ} {δ : ι → ℝ}
+  {c p q L R : ι → ℕ → ℤ} (hg : ∀ (i : ι), 0 < g i) (hδ : ∀ (i : ι), 0 < δ i) (hp : ∀ (i : ι) (n : ℕ), 0 < p i n)
+  (hq : ∀ (i : ι) (n : ℕ), 0 < q i n) (hcop : ∀ (i : ι) (n : ℕ), IsCoprime (p i n) (q i n))
+  (hpinf : ∀ (i : ι), Filter.Tendsto (p i) Filter.atTop Filter.atTop)
+  (hqinf : ∀ (i : ι), Filter.Tendsto (q i) Filter.atTop Filter.atTop) (hL0 : ∀ (i : ι) (n : ℕ), 0 ≤ L i n)
+  (hR0 : ∀ (i : ι) (n : ℕ), 0 ≤ R i n) (hL : ∀ (i : ι) (n : ℕ), δ i * ↑(q i n) ≤ ↑(L i n))
+  (hR : ∀ (i : ι) (n : ℕ), δ i * ↑(p i n) ≤ ↑(R i n))
+  (ha :
+    ∀ (i : ι),
+      Erdos332.approximates (A i) (g i) 0 fun n => Erdos332.centeredBlock (g i) (c i n) (p i n) (q i n) (L i n) (R i n))
+  (he :
+    ∀ (i : ι), Erdos332.escapes (g i) fun n => Erdos332.centeredBlock (g i) (c i n) (p i n) (q i n) (L i n) (R i n)) :
+  Erdos332.syndetic (⋂ i, Erdos332.differences (A i))
+theorem Erdos332.centered_finite_intersection.{u_1} : ∀ {ι : Type u_1} [Fintype ι] {A : ι → Set ℕ} {g : ι → ℤ}
+  {δ : ι → ℝ} {c p q L R : ι → ℕ → ℤ},
+  (∀ (i : ι), 0 < g i) →
+    (∀ (i : ι), 0 < δ i) →
+      (∀ (i : ι) (n : ℕ), 0 < p i n) →
+        (∀ (i : ι) (n : ℕ), 0 < q i n) →
+          (∀ (i : ι) (n : ℕ), IsCoprime (p i n) (q i n)) →
+            (∀ (i : ι), Filter.Tendsto (p i) Filter.atTop Filter.atTop) →
+              (∀ (i : ι), Filter.Tendsto (q i) Filter.atTop Filter.atTop) →
+                (∀ (i : ι) (n : ℕ), 0 ≤ L i n) →
+                  (∀ (i : ι) (n : ℕ), 0 ≤ R i n) →
+                    (∀ (i : ι) (n : ℕ), δ i * ↑(q i n) ≤ ↑(L i n)) →
+                      (∀ (i : ι) (n : ℕ), δ i * ↑(p i n) ≤ ↑(R i n)) →
+                        (∀ (i : ι),
+                            Erdos332.approximates (A i) (g i) 0 fun n =>
+                              Erdos332.centeredBlock (g i) (c i n) (p i n) (q i n) (L i n) (R i n)) →
+                          (∀ (i : ι),
+                              Erdos332.escapes (g i) fun n =>
+                                Erdos332.centeredBlock (g i) (c i n) (p i n) (q i n) (L i n) (R i n)) →
+                            Erdos332.syndetic (⋂ i, Erdos332.differences (A i)) :=
+fun {ι} [Fintype ι] {A} {g} {δ} {c p q L R} hg hδ hp hq hcop hpinf hqinf hL0 hR0 hL hR ha he =>
+  (fun v hv =>
+      Erdos332.finite_common_point_intersection hg hδ hp hq hpinf hqinf hv ha he
+        (fun i n => Erdos332.centeredBlock_cross (g i) (c i n) (p i n) (q i n) (L i n) (R i n) (hL0 i n) (hR0 i n))
+        fun i n => Erdos332.centeredBlock_width (hg i) (hp i n) (hq i n) (hδ i) (hL i n) (hR i n))
+    (fun i n => Classical.choose ((fun i n => Erdos332.inverse_of_coprime (hcop i n)) i n)) fun i n =>
+    Classical.choose_spec ((fun i n => Erdos332.inverse_of_coprime (hcop i n)) i n)
+'Erdos332.cross_of_index' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.cross_of_common_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.gapCertificate.window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.inverse_transfer' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.finite_gap_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.recurring_iff_infinite_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.transfer_recurring' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.transfer_gapBound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.escapes_of_bases' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.integer_grid_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.cross_occurs' does not depend on any axioms
+'Erdos332.model_gap_of_finite_test' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.finite_test' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.gapBound_nearby' depends on axioms: [propext, Quot.sound]
+'Erdos332.gapBound_scale' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.modelRecurring_neg' depends on axioms: [propext, Quot.sound]
+'Erdos332.bohr_syndetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.gapCertificate_full_period' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.maxGapNumerator_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.maxGapNumerator_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.gapCertificate_iff_real_cover' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.offset_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.canonicalFiniteTest_implies' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.centeredResidue_mod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.centeredResidue_norm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.int_eq_zero_of_dvd_abs_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.anchor_interval' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.move_inside' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.cross_small_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.modelRecurring_subsequence' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.gapBound_mono' does not depend on any axioms
+'Erdos332.anchored_convergent_near_bohr' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.anchored_model_syndetic' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.width_eq_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.windowWidth_shift' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.anchored_width_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.cross_base' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.eventual_anchored_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.bounded_contact_model' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.bounded_contact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.common_point_bohr_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.finite_positive_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.finite_common_point_intersection' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.affine_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.affine_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.hullOverlap_eq_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.overlap_implies_originalWidth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.bounded_contact_hulls' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.translated_overlap_implies_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.finiteHullTest_implies' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.finite_test_hulls' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.inverse_of_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.escapes_of_min_bases' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.main_bounded_contact' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.main_finite_test' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.centeredBlock_cross' depends on axioms: [propext, Quot.sound]
+'Erdos332.centeredBlock_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Erdos332.centered_finite_intersection' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,66 @@
+﻿2026-11-11T16:27:29.3924110Z ##[group]Run python3 scripts/verify.py --kernel-replay
+2026-11-11T16:27:29.3924484Z ^[[36;1mpython3 scripts/verify.py --kernel-replay^[[0m
+2026-11-11T16:27:29.4471983Z shell: /usr/bin/bash -e {0}
+2026-11-11T16:27:29.4472243Z env:
+2026-11-11T16:27:29.4472430Z   LEAN_NUM_THREADS: 2
+2026-11-11T16:27:29.4472630Z ##[endgroup]
+2026-11-11T16:27:29.7326991Z Running lake build
+2026-11-11T16:27:34.9775770Z
+2026-11-11T16:27:34.9776922Z Note: This linter can be disabled with `set_option linter.unnecessarySimpa false`
+2026-11-11T16:27:34.9777862Z warning: Erdos332.lean:404:19: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-11-11T16:27:34.9778699Z warning: Erdos332.lean:444:26: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-11-11T16:27:34.9779500Z warning: Erdos332.lean:450:26: `dif_pos` has been deprecated: Use `dite_eq_left` instead
+2026-11-11T16:27:34.9780212Z warning: Erdos332.lean:530:43: Variable name `hq` is not explicitly referenced.
+2026-11-11T16:27:34.9780638Z
+2026-11-11T16:27:34.9781307Z Hint: The binding can be removed (if unused) or named `_` (if used implicitly). Alternatively, prefix the name with `_` to silence this warning:
+2026-11-11T16:27:34.9782158Z   [apply] _hq
+2026-11-11T16:27:34.9782433Z
+2026-11-11T16:27:34.9782830Z Note: This linter can be disabled with `set_option linter.unusedVariables false`
+2026-11-11T16:27:34.9783618Z warning: Erdos332.lean:606:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+2026-11-11T16:27:34.9784137Z
+2026-11-11T16:27:34.9784541Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+2026-11-11T16:27:34.9785346Z warning: Erdos332.lean:613:38: Used `tac1 <;> tac2` where `(tac1; tac2)` would suffice
+2026-11-11T16:27:34.9785845Z
+2026-11-11T16:27:34.9786391Z Note: This linter can be disabled with `set_option linter.unnecessarySeqFocus false`
+2026-11-11T16:27:34.9787068Z Build completed successfully (1898 jobs).
+2026-11-11T16:27:34.9787584Z Running lake env lean verification/Audit.lean
+2026-11-11T16:27:48.3351294Z 'Erdos332.common_point_bohr_subset' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3352454Z 'Erdos332.finite_positive_lower' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3353692Z 'Erdos332.finite_common_point_intersection' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3354652Z 'Erdos332.affine_min' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3355463Z 'Erdos332.affine_max' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3356502Z 'Erdos332.hullOverlap_eq_window' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3357550Z 'Erdos332.overlap_implies_originalWidth' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3358550Z 'Erdos332.bounded_contact_hulls' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3359475Z 'Erdos332.translated_overlap_implies_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3360428Z 'Erdos332.finiteHullTest_implies' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3361308Z 'Erdos332.finite_test_hulls' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3362167Z 'Erdos332.inverse_of_coprime' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3363048Z 'Erdos332.escapes_of_min_bases' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3363918Z 'Erdos332.main_bounded_contact' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3365177Z 'Erdos332.main_finite_test' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3366528Z 'Erdos332.centeredBlock_cross' depends on axioms: [propext, Quot.sound]
+2026-11-11T16:27:48.3367441Z 'Erdos332.centeredBlock_width' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3368972Z 'Erdos332.centered_finite_intersection' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:48.3370122Z Running lake env lean verification/Challenge.lean
+2026-11-11T16:27:50.3225297Z Erdos332SubmissionCheck.bounded_contact_challenge {A : Set ℕ} {g C K : ℤ} {δ : ℝ} {B : ℕ → Erdos332.Block} (hg : 0 < g)
+2026-11-11T16:27:50.3229824Z   (hC : 0 ≤ C) (hδ : 0 < δ) (hp : ∀ (n : ℕ), 0 < (B n).p) (hq : ∀ (n : ℕ), 0 < (B n).q)
+2026-11-11T16:27:50.3230629Z   (hcop : ∀ (n : ℕ), IsCoprime (B n).p (B n).q) (hpinf : Tendsto (fun n => (B n).p) atTop atTop)
+2026-11-11T16:27:50.3231350Z   (hqinf : Tendsto (fun n => (B n).q) atTop atTop) (hbases : Tendsto (fun n => min (B n).a (B n).b) atTop atTop)
+2026-11-11T16:27:50.3231999Z   (ha : Erdos332.approximates A g C B)
+2026-11-11T16:27:50.3232319Z   (hgood :
+2026-11-11T16:27:50.3232606Z     ∃ᶠ (n : ℕ) in atTop,
+2026-11-11T16:27:50.3233202Z       δ ≤ Erdos332.hullOverlap g (B n) / (↑g * ↑(B n).p * ↑(B n).q) ∧ ∃ r, |r| ≤ K ∧ Erdos332.cross g (B n) r) :
+2026-11-11T16:27:50.3233739Z   BoundedGaps {d | InfiniteRepresentations A d}
+2026-11-11T16:27:50.3234367Z Erdos332SubmissionCheck.finite_gap_challenge {A : Set ℕ} {g C : ℤ} {H : ℕ} {B : ℕ → Erdos332.Block} (hg : 0 < g)
+2026-11-11T16:27:50.3235065Z   (hC : 0 ≤ C) (hH : 0 < H) (hp : ∀ (n : ℕ), 0 < (B n).p) (hq : ∀ (n : ℕ), 0 < (B n).q)
+2026-11-11T16:27:50.3235664Z   (hpinf : Tendsto (fun n => (B n).p) atTop atTop) (hqinf : Tendsto (fun n => (B n).q) atTop atTop)
+2026-11-11T16:27:50.3236541Z   (hbases : Tendsto (fun n => min (B n).a (B n).b) atTop atTop) (ha : Erdos332.approximates A g C B)
+2026-11-11T16:27:50.3237390Z   (hgood : ∃ᶠ (n : ℕ) in atTop, Erdos332.finiteHullTest g H (B n)) :
+2026-11-11T16:27:50.3238122Z   0 < 2 * g * ↑H + 4 * C ∧ ∀ (z : ℤ), ∃ d, InfiniteRepresentations A d ∧ z ≤ d ∧ d < z + (2 * g * ↑H + 4 * C)
+2026-11-11T16:27:50.3238966Z 'Erdos332SubmissionCheck.representation_bridge' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:50.3239926Z 'Erdos332SubmissionCheck.bounded_contact_challenge' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:50.3240901Z 'Erdos332SubmissionCheck.finite_gap_challenge' depends on axioms: [propext, Classical.choice, Quot.sound]
+2026-11-11T16:27:50.3669094Z Running lake env leanchecker --fresh --verbose Submission
+2026-11-11T16:31:01.6727168Z replaying Submission with --fresh
+2026-11-11T16:31:01.6727710Z PASS for declared formal targets

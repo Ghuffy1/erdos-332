@@ -11,7 +11,7 @@ The owner has authorized release and the contribution submission following final
 - `claims/` contains one unsigned award-claim draft for each contributor. Each applicant must submit through their own account after the contribution PR has merged, subject to the applicable rules.
 - `requirements.json` and `readiness.md` map the official requirements to evidence and outstanding external actions.
 - `source-record.json` pins the original problem, manuscript, formal source revision, and technical checks.
-- [Final preparation audit](final-audit.json) records 27 completed checks covering the package, exact source, author metadata, official forms, catalog patch, repository visibility, and private-material scan.
+- [Final verification report](../verification/report.md) records the completed mathematical, formal, and submission checks. The earlier [private preparation audit](final-audit.json) remains available as a dated record.
 
 ## Release sequence
 

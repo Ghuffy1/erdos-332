@@ -45,5 +45,14 @@
   ],
   "upstream_rules_commit": "b1bfe454d37db2838ef76756830aeb23c40de95e",
   "verified_checkout": "4b0076ece6b77c470d676702fe037049076ac999",
-  "manuscript_version": "11 November 2026, final pre-submission bibliography revision"
+  "manuscript_version": "11 November 2026, final pre-submission bibliography revision",
+  "manuscript_commit": "cf1e6ab6401ce288dcb4194fdfe314c2edb2fc84",
+  "manuscript_pages": 10,
+  "latest_verification": {
+    "checkout": "4b0076ece6b77c470d676702fe037049076ac999",
+    "formal_source_identical_to_proof_commit": "6d65e28f986b8434d9448e6e4ba73e7ddd17ef43",
+    "native_completed_at_utc": "2026-11-11T16:37:53.658972+00:00",
+    "evidence": "verification/final-review/",
+    "hosted_run": "https://github.com/Ghuffy1/erdos-332/actions/runs/43057640603"
+  }
 }

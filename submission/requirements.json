@@ -41,26 +41,26 @@
     {
       "id": "R07",
       "requirement": "Clean build and all target checks",
-      "status": "passed",
-      "evidence": "verification/report.md; verification/evidence/"
+      "status": "passed in final verification",
+      "evidence": "verification/report.md; verification/final-review/"
     },
     {
       "id": "R08",
       "requirement": "Full transitive axiom audit",
-      "status": "passed",
-      "evidence": "verification/report.md; verification/evidence/"
+      "status": "passed in final verification",
+      "evidence": "verification/report.md; verification/final-review/"
     },
     {
       "id": "R09",
       "requirement": "Fresh kernel replay",
-      "status": "passed",
-      "evidence": "verification/report.md; verification/evidence/"
+      "status": "passed in final verification",
+      "evidence": "verification/report.md; verification/final-review/"
     },
     {
       "id": "R10",
       "requirement": "Hosted CI at the selected revision",
-      "status": "passed",
-      "evidence": "verification/report.md; verification/evidence/"
+      "status": "passed in final verification",
+      "evidence": "verification/report.md; verification/final-review/"
     },
     {
       "id": "R11",
@@ -106,14 +106,14 @@
     },
     {
       "id": "R18",
-      "requirement": "Private visibility and correct repository owner",
-      "status": "prepared",
+      "requirement": "Correct repository owner and reviewer access",
+      "status": "owner verified; public release authorized",
       "evidence": "https://github.com/Ghuffy1/erdos-332"
     },
     {
       "id": "R19",
       "requirement": "Publication and submission authorization",
-      "status": "pending owner action",
+      "status": "authorized after successful final verification",
       "evidence": "submission/readiness.md"
     },
     {
@@ -168,7 +168,7 @@
       "id": "R28",
       "requirement": "Private-history and secret scan",
       "status": "passed",
-      "evidence": "submission/final-audit.json"
+      "evidence": "verification/final-review/package-audit.json; verification/final-review/workflow-history-review.json"
     }
   ]
 }

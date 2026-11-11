@@ -1,0 +1,457 @@
+{
+  "started_at_utc": "2026-11-11T16:24:11.628317+00:00",
+  "source_commit": "4b0076ece6b77c470d676702fe037049076ac999",
+  "branch": "main",
+  "lean_toolchain": "leanprover/lean4:v4.34.1",
+  "commands": [
+    {
+      "command": [
+        "lake",
+        "build"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 249.625,
+      "log": "build.log"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "verification/Audit.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 21.641,
+      "log": "axioms.log"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "lean",
+        "verification/Challenge.lean"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 23.578,
+      "log": "challenge.log"
+    },
+    {
+      "command": [
+        "lake",
+        "env",
+        "leanchecker",
+        "--fresh",
+        "--verbose",
+        "Submission"
+      ],
+      "exit_code": 0,
+      "elapsed_seconds": 522.406,
+      "log": "kernel-replay.log"
+    }
+  ],
+  "kernel_replay": "passed",
+  "independent_checker": "not run",
+  "verdict": "PASS for declared formal targets",
+  "source_files": {
+    "Erdos332.lean": {
+      "bytes": 53438,
+      "sha256": "b984315b7dd72267d3f226ef6b6ee09ffd11d636a944378e0c5d90bc2e782b07"
+    },
+    "Submission.lean": {
+      "bytes": 2612,
+      "sha256": "16bec06badfd4db074bc925f1e20e7cb08257f8da5162e9529410eb4e1d164ad"
+    },
+    "verification/Audit.lean": {
+      "bytes": 3134,
+      "sha256": "2e17a42996c32d8b99152abe936d327b64f1acc6a3e8d823ac2511f7abd6f3b8"
+    },
+    "verification/Challenge.lean": {
+      "bytes": 2464,
+      "sha256": "e56b6c6f30d0f5a617bb2146caf4937904d287b13e5c1558a186ab3f178aa065"
+    },
+    "lakefile.toml": {
+      "bytes": 322,
+      "sha256": "e5af1924058160adb35126f74877e67bf0fbf9c988f828a800d96775cb47c011"
+    },
+    "lake-manifest.json": {
+      "bytes": 3542,
+      "sha256": "0ba42a7c968c1d028f6ef886113af09ee1c73f42b214c59745af6642db5f82ec"
+    },
+    "lean-toolchain": {
+      "bytes": 25,
+      "sha256": "d5edba4e4b8faad9c1baeadb265716d20d03be4d1a2647dc5e35b0c0325bea7b"
+    },
+    "paper/recurring_differences.tex": {
+      "bytes": 30868,
+      "sha256": "7ad6034e6b4531c71ab482b4531d3c311d10c5709195fd405897f30d26a6ea8e"
+    },
+    "paper/recurring_differences.pdf": {
+      "bytes": 123700,
+      "sha256": "044f491d87c80a1a74a007b754eefb17fd2428bdacc473c5b473442bbfd0c9b7"
+    }
+  },
+  "theorems_audited": 64,
+  "axiom_union": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "axiom_records": {
+    "Erdos332Submission.recurrentDifferences_eq": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332Submission.natural_gap_bound": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Erdos332Submission.erdos_332": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.cross_of_index": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.cross_of_common_interval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.gapCertificate.window": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.inverse_transfer": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.finite_gap_window": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.recurring_iff_infinite_pairs": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.transfer_recurring": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.transfer_gapBound": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.escapes_of_bases": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.integer_grid_interval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.cross_occurs": [],
+    "Erdos332.model_gap_of_finite_test": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.finite_test": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.gapBound_nearby": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Erdos332.gapBound_scale": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.modelRecurring_neg": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Erdos332.bohr_syndetic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.gapCertificate_full_period": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.maxGapNumerator_spec": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.maxGapNumerator_min": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.gapCertificate_iff_real_cover": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.offset_identity": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.canonicalFiniteTest_implies": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.centeredResidue_mod": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.centeredResidue_norm": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.int_eq_zero_of_dvd_abs_lt": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.anchor_interval": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.move_inside": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.cross_small_shift": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.modelRecurring_subsequence": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.gapBound_mono": [],
+    "Erdos332.anchored_convergent_near_bohr": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.anchored_model_syndetic": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.width_eq_window": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.windowWidth_shift": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.anchored_width_lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.cross_base": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.eventual_anchored_width": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.bounded_contact_model": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.bounded_contact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.common_point_bohr_subset": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.finite_positive_lower": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.finite_common_point_intersection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.affine_min": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.affine_max": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.hullOverlap_eq_window": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.overlap_implies_originalWidth": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.bounded_contact_hulls": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.translated_overlap_implies_width": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.finiteHullTest_implies": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.finite_test_hulls": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.inverse_of_coprime": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.escapes_of_min_bases": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.main_bounded_contact": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.main_finite_test": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.centeredBlock_cross": [
+      "propext",
+      "Quot.sound"
+    ],
+    "Erdos332.centeredBlock_width": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332.centered_finite_intersection": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332SubmissionCheck.representation_bridge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332SubmissionCheck.bounded_contact_challenge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ],
+    "Erdos332SubmissionCheck.finite_gap_challenge": [
+      "propext",
+      "Classical.choice",
+      "Quot.sound"
+    ]
+  },
+  "dependencies": [
+    {
+      "name": "mathlib",
+      "commit": "d13f23b723b8a846827a245b89c10fc7d3f11612",
+      "tracked_changes": []
+    },
+    {
+      "name": "plausible",
+      "commit": "118aa17ee84656b8bd727fef7c458ee8c833385c",
+      "tracked_changes": []
+    },
+    {
+      "name": "LeanSearchClient",
+      "commit": "ddf04cf3949fa556442341e87d47f9f6e6074707",
+      "tracked_changes": []
+    },
+    {
+      "name": "importGraph",
+      "commit": "e928b72544873815af278d38681b31c0293588e3",
+      "tracked_changes": []
+    },
+    {
+      "name": "proofwidgets",
+      "commit": "106ff4fafc74ef4ac99d81dbf3ab399118f497a5",
+      "tracked_changes": []
+    },
+    {
+      "name": "aesop",
+      "commit": "355695d523e41d0554926416cba2a2b3544fbbc9",
+      "tracked_changes": []
+    },
+    {
+      "name": "Qq",
+      "commit": "6a489d9af5d0c47e5b259e2e8bcdfc1811b5a259",
+      "tracked_changes": []
+    },
+    {
+      "name": "batteries",
+      "commit": "f2effa3d803fda822b1f97b806c47cf2adfbcbc2",
+      "tracked_changes": []
+    },
+    {
+      "name": "Cli",
+      "commit": "e92c9f15fdfacc8536f31cfb3b7ad26c3c8cd204",
+      "tracked_changes": []
+    }
+  ],
+  "completed_at_utc": "2026-11-11T16:37:53.658972+00:00"
+}

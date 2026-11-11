@@ -12,11 +12,11 @@
 -| Publication details |  |
 +| Current status | Solved<br>Proof contributors: Will Howe (H0W4RD-dev), Grant Huffman (Ghuffy1), Jensen Kohlmeyer (JENW1N), and Liam Kruer (lkruer), equal contributors. |
 +| Lean proof | Yes — [Original-question entry](https://github.com/Ghuffy1/erdos-332/blob/6d65e28f986b8434d9448e6e4ba73e7ddd17ef43/Submission.lean)<br>[Progression proofs](https://github.com/Ghuffy1/erdos-332/blob/6d65e28f986b8434d9448e6e4ba73e7ddd17ef43/Erdos332.lean)<br>Formalization contributors: Will Howe (H0W4RD-dev), Grant Huffman (Ghuffy1), Jensen Kohlmeyer (JENW1N), and Liam Kruer (lkruer), equal contributors.<br>Scope: the supplied progression sufficient conditions and centered finite-family theorem. |
-+| Attribution basis | [Author declaration](https://github.com/Ghuffy1/erdos-332/blob/6d65e28f986b8434d9448e6e4ba73e7ddd17ef43/AUTHORS.md) · [Mathematical manuscript](https://github.com/Ghuffy1/erdos-332/blob/6d65e28f986b8434d9448e6e4ba73e7ddd17ef43/paper/recurring_differences.pdf) |
++| Attribution basis | [Author declaration](https://github.com/Ghuffy1/erdos-332/blob/cf1e6ab6401ce288dcb4194fdfe314c2edb2fc84/AUTHORS.md) · [Mathematical manuscript](https://github.com/Ghuffy1/erdos-332/blob/cf1e6ab6401ce288dcb4194fdfe314c2edb2fc84/paper/recurring_differences.pdf) |
 +| Eligible to claim | No |
 +| Historical bounty |  |
 +| Elapsed years | About 46 years (since 1980) |
-+| Publication details | [Recurring Differences from Overlapping Arithmetic Progressions](https://github.com/Ghuffy1/erdos-332/blob/6d65e28f986b8434d9448e6e4ba73e7ddd17ef43/paper/recurring_differences.pdf), private preprint prepared 11 November 2026, Theorems 1.1 and 1.2. Proposed full-problem scope is subject to mathematical review. |
++| Publication details | [Recurring Differences from Overlapping Arithmetic Progressions](https://github.com/Ghuffy1/erdos-332/blob/cf1e6ab6401ce288dcb4194fdfe314c2edb2fc84/paper/recurring_differences.pdf), preprint, final bibliography revision 11 November 2026, Theorems 1.1 and 1.2. Proposed full-problem scope is subject to mathematical review. |
  | Scholarly recognition |  |
  
  <a id="JSP-000277"></a>
