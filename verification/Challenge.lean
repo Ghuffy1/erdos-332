@@ -1,4 +1,4 @@
-import Erdos332
+import Submission
 
 set_option autoImplicit false
 
@@ -10,7 +10,7 @@ def InfiniteRepresentations (A : Set ℕ) (d : ℤ) : Prop :=
   Set.Infinite {p : ℕ × ℕ | p.1 ∈ A ∧ p.2 ∈ A ∧ (p.1 : ℤ) - p.2 = d}
 
 def BoundedGaps (S : Set ℤ) : Prop :=
-  ∃ M : ℤ, 0 < M ∧ ∀ z : ℤ, ∃ d ∈ S, z ≤ d ∧ d < z + M
+  ∃ M : ℕ, 0 < M ∧ ∀ z : ℤ, ∃ d ∈ S, z ≤ d ∧ d < z + (M : ℤ)
 
 theorem representation_bridge (A : Set ℕ) :
     {d | InfiniteRepresentations A d} = Erdos332.differences A := by
@@ -31,7 +31,8 @@ theorem bounded_contact_challenge {A : Set ℕ} {g C K : ℤ} {δ : ℝ}
         ∃ r : ℤ, |r| ≤ K ∧ Erdos332.cross g (B n) r) :
     BoundedGaps {d | InfiniteRepresentations A d} := by
   rw [representation_bridge]
-  exact Erdos332.main_bounded_contact hg hC hδ hp hq hcop hpinf hqinf hbases ha hgood
+  exact Erdos332Submission.natural_gap_bound
+    (Erdos332.main_bounded_contact hg hC hδ hp hq hcop hpinf hqinf hbases ha hgood)
 
 theorem finite_gap_challenge {A : Set ℕ} {g C : ℤ} {H : ℕ}
     {B : ℕ → Erdos332.Block}

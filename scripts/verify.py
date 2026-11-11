@@ -78,7 +78,7 @@ def main() -> int:
             raise RuntimeError("Tracked changes prevent verification of an exact committed source.")
         result["source_files"] = {}
         for name in (
-            "Erdos332.lean", "verification/Audit.lean", "verification/Challenge.lean",
+            "Erdos332.lean", "Submission.lean", "verification/Audit.lean", "verification/Challenge.lean",
             "lakefile.toml", "lake-manifest.json", "lean-toolchain",
             "paper/recurring_differences.tex", "paper/recurring_differences.pdf",
         ):
@@ -102,14 +102,29 @@ def main() -> int:
             "Erdos332." + name
             for name in re.findall(r"^(?:theorem|lemma)\s+([\w.]+)", source, re.MULTILINE)
         }
+        submission_source = (ROOT / "Submission.lean").read_text(encoding="utf-8")
+        if re.search(
+            r"\b(?:sorry|admit|axiom|unsafe|native_decide)\b|debug\.skipKernelTC|implemented_by",
+            submission_source,
+        ):
+            raise RuntimeError("Submission.lean requires additional manual trust review.")
+        expected.update(
+            "Erdos332Submission." + name
+            for name in re.findall(r"^theorem\s+([\w.]+)", submission_source, re.MULTILINE)
+        )
         challenge_source = (ROOT / "verification" / "Challenge.lean").read_text(encoding="utf-8")
+        if re.search(
+            r"\b(?:sorry|admit|axiom|unsafe|native_decide)\b|debug\.skipKernelTC|implemented_by",
+            challenge_source,
+        ):
+            raise RuntimeError("The statement bridge requires additional manual trust review.")
         expected.update(
             "Erdos332SubmissionCheck." + name
             for name in re.findall(
                 r"^theorem\s+([\w.]+)", challenge_source, re.MULTILINE
             )
         )
-        result["commands"].append(run(["lake", "build", "Erdos332"], destination / "build.log"))
+        result["commands"].append(run(["lake", "build"], destination / "build.log"))
         result["commands"].append(run(
             ["lake", "env", "lean", "verification/Audit.lean"], destination / "axioms.log"
         ))
@@ -139,7 +154,7 @@ def main() -> int:
         result["dependencies"] = dependencies
         if options.kernel_replay:
             result["commands"].append(run(
-                ["lake", "env", "leanchecker", "--fresh", "--verbose", "Erdos332"],
+                ["lake", "env", "leanchecker", "--fresh", "--verbose", "Submission"],
                 destination / "kernel-replay.log",
             ))
             result["kernel_replay"] = "passed"

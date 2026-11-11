@@ -9,6 +9,7 @@ Private preparation of a combined mathematical-solution and formalization submis
 - [Proof manuscript](paper/recurring_differences.pdf), with all four authors, correspondence addresses, and an AI acknowledgment.
 - [Manuscript source](paper/recurring_differences.tex).
 - [Formal proof](Erdos332.lean).
+- [Original-question entry point and explicit sufficient condition](Submission.lean).
 - [Statement correspondence and coverage](docs/statement-correspondence.md).
 - [Prior work and related submissions](docs/prior-work.md).
 
@@ -25,7 +26,7 @@ python scripts/verify.py --kernel-replay
 
 The command builds the project, checks the independent recurring-pair statement bridge, audits every proof theorem, verifies dependency revisions, and replays the compiled proof in a fresh kernel environment. It writes raw logs and a machine-readable result under `.verification-run/`.
 
-The three main declarations are `Erdos332.main_bounded_contact`, `Erdos332.main_finite_test`, and `Erdos332.centered_finite_intersection`. [Verification entry](verification/Audit.lean) · [Statement bridge](verification/Challenge.lean)
+`Erdos332Submission.erdos_332` states the original implication with an explicit sufficient-condition predicate and a positive natural-number gap bound. Its main components are `Erdos332.main_bounded_contact`, `Erdos332.main_finite_test`, and `Erdos332.centered_finite_intersection`. [Verification entry](verification/Audit.lean) · [Statement bridge](verification/Challenge.lean)
 
 ## Submission preparation
 

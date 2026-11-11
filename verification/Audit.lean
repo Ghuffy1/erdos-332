@@ -1,4 +1,11 @@
-import Erdos332
+import Submission
+
+#check Erdos332Submission.erdos_332
+#print Erdos332Submission.erdos_332
+#print Erdos332Submission.sufficientCondition
+#print axioms Erdos332Submission.recurrentDifferences_eq
+#print axioms Erdos332Submission.natural_gap_bound
+#print axioms Erdos332Submission.erdos_332
 
 #check Erdos332.recurring_iff_infinite_pairs
 #print Erdos332.recurring_iff_infinite_pairs

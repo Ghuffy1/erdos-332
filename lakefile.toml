@@ -1,6 +1,6 @@
 name = "erdos332"
 version = "0.1.0"
-defaultTargets = ["Erdos332"]
+defaultTargets = ["Erdos332", "Submission"]
 
 [leanOptions]
 autoImplicit = false
@@ -12,3 +12,6 @@ rev = "d13f23b723b8a846827a245b89c10fc7d3f11612"
 
 [[lean_lib]]
 name = "Erdos332"
+
+[[lean_lib]]
+name = "Submission"
