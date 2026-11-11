@@ -1,0 +1,534 @@
+\documentclass[11pt,leqno]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,margin=1in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype}
+\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
+\hypersetup{pdftitle={Recurring Differences from Overlapping Arithmetic Progressions},
+ pdfauthor={Will Howe, Grant Huffman, Jensen Kohlmeyer, Liam Kruer},
+ pdfsubject={Sufficient conditions for syndetic recurrent difference sets},
+ pdfkeywords={recurrent differences, arithmetic progressions, syndeticity, upper Banach density}}
+\numberwithin{equation}{section}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\N}{\mathbb N}
+\newcommand{\Z}{\mathbb Z}
+\newcommand{\R}{\mathbb R}
+\newcommand{\T}{\mathbb T}
+\newcommand{\dist}{\operatorname{dist}}
+\newcommand{\len}{\operatorname{length}}
+\newcommand{\D}{\mathcal D}
+\newcommand{\normt}[1]{\left\|#1\right\|_{\T}}
+\newcommand{\fr}[1]{\left\{#1\right\}}
+\newcommand{\gap}{\Delta}
+\setlength{\emergencystretch}{1.5em}
+
+\title[Recurring differences]{Recurring differences from overlapping arithmetic progressions}
+\author[W. Howe, G. Huffman, J. Kohlmeyer, and L. Kruer]{Will Howe, Grant Huffman, Jensen Kohlmeyer, and Liam Kruer}
+\thanks{\textit{E-mail addresses.}
+\href{mailto:howew@purdue.edu}{\texttt{howew@purdue.edu}} (W. Howe),
+\href{mailto:huffma97@purdue.edu}{\texttt{huffma97@purdue.edu}} (G. Huffman),
+\href{mailto:jenwin@purdue.edu}{\texttt{jenwin@purdue.edu}} (J. Kohlmeyer),
+\href{mailto:kruerl@purdue.edu}{\texttt{kruerl@purdue.edu}} (L. Kruer).}
+\date{November 11, 2026}
+\keywords{recurrent difference sets, syndetic sets, arithmetic progressions, upper Banach density}
+
+\begin{document}
+\begin{abstract}
+We give sufficient conditions for the signed differences occurring infinitely often in a set of natural numbers to have bounded gaps. The hypotheses use pairs of finite arithmetic progressions with coprime step quotients, positive normalized overlap, and bounded mutual distance. Bounded perturbations of the progressions are allowed. A finite circular-gap criterion gives the explicit bound $2gH+4C$, including equality at the overlap threshold. Exact centered pairs yield a finite-intersection theorem. Separated constructions realize these conditions at zero upper Banach density and give examples with no recurrent three-point pattern, no infinite arithmetic progression of recurrent differences, and infinitely many pairwise almost disjoint translates. Further examples describe the rational limiting threshold and the order of the quantitative gap bound.
+\end{abstract}
+\maketitle
+
+\section{Introduction and main results}
+
+For $A\subseteq\N=\{1,2,\ldots\}$, define its signed recurrent difference set by
+\begin{equation}\label{eq:D}
+\D(A)=\{d\in\Z:\text{infinitely many }(a,b)\in A^2\text{ satisfy }a-b=d\}.
+\end{equation}
+A set $S\subseteq\Z$ is \emph{syndetic} if some positive integer $M$ satisfies
+\begin{equation}\label{eq:syndetic}
+S\cap[z,z+M)\ne\varnothing\qquad(z\in\Z).
+\end{equation}
+We call such an $M$ a gap bound. Erd\H{o}s and Graham asked for conditions ensuring this property for $\D(A)$, and also considered finite intersections of recurrent difference sets \cite[p.~50]{EG}. Positive upper Banach density is a classical sufficient condition, including for finite intersections \cite{Ruzsa}. Sparse sufficient conditions arise in the work of Leth and Goldbring--Leth \cite{Leth,GL}. The conditions below concern the steps, lengths, overlap, and relative positions of finite progression pairs.
+
+Fix $g\in\N$. For each $n\ge1$, let
+\begin{equation}\label{eq:models}
+\begin{split}
+P_n&=a_n+gp_n\{0,1,\ldots,L_n\},\\
+Q_n&=b_n+gq_n\{0,1,\ldots,R_n\},
+\end{split}
+\end{equation}
+where $a_n,b_n\in\Z$, $L_n,R_n\in\Z_{\ge0}$, and
+\begin{equation}\label{eq:standing}
+p_n,q_n\ge2,\qquad \gcd(p_n,q_n)=1,\qquad
+p_n,q_n\longrightarrow\infty,\qquad
+\min(a_n,b_n)\longrightarrow\infty.
+\end{equation}
+Write $I_n$ and $J_n$ for the real convex hulls of $P_n$ and $Q_n$, and put $M_n=gp_nq_n$. We assume that, for a fixed integer $C\ge0$,
+\begin{equation}\label{eq:approx}
+\dist(t,A)\le C\qquad(t\in P_n\cup Q_n,\ n\ge1).
+\end{equation}
+
+For $\theta\in\T=\R/\Z$ and $H\ge1$, let $\gap_H(\theta)$ be the largest circular gap between the distinct points of
+\begin{equation}\label{eq:circlepoints}
+\{0,\theta,\ldots,(H-1)\theta\}\subseteq\T.
+\end{equation}
+The gap of a singleton is $1$.
+
+\begin{theorem}\label{thm:main}
+Assume \eqref{eq:models}--\eqref{eq:approx}. Each of the following conditions makes $\D(A)$ syndetic.
+\begin{enumerate}
+\item There are $\delta>0$ and $B<\infty$ such that, for infinitely many $n$,
+\begin{equation}\label{eq:contact}
+\len(I_n\cap J_n)\ge\delta M_n,
+\qquad \min_{u\in P_n,\,v\in Q_n}|u-v|\le B.
+\end{equation}
+\item Fix $H\ge1$. Let $r_n\in\{0,\ldots,g-1\}$ be congruent to $a_n-b_n$ modulo $g$, and let $v_n\in\{0,\ldots,q_n-1\}$ satisfy $p_nv_n\equiv1\pmod{q_n}$. Put $\alpha_n=v_n/q_n$. For infinitely many $n$, assume
+\begin{equation}\label{eq:finite-test}
+\frac{\len\bigl(I_n\cap(J_n+r_n)\bigr)}{M_n}
+\ge\gap_H(\alpha_n).
+\end{equation}
+Then $2gH+4C$ is a gap bound for $\D(A)$.
+\end{enumerate}
+\end{theorem}
+
+The second condition is non-strict. In particular, its conclusion includes models whose normalized overlap equals the largest circular gap. The first condition also permits contacts at endpoints of the overlapping hulls.
+
+\begin{theorem}\label{thm:family}
+Let $A_1,\ldots,A_m\subseteq\N$. For each $i$, suppose $A_i$ contains the exact progression pairs
+\begin{equation}\label{eq:centered}
+\begin{split}
+c_{i,n}+g_ip_{i,n}\{-L_{i,n},\ldots,L_{i,n}\},\\
+c_{i,n}+g_iq_{i,n}\{-R_{i,n},\ldots,R_{i,n}\}.
+\end{split}
+\end{equation}
+Assume their minimum points tend to infinity, $g_i\in\N$ is fixed, and the coprime integers $p_{i,n},q_{i,n}$ tend to infinity. Suppose that, for some $\delta_i>0$,
+\begin{equation}\label{eq:centered-lengths}
+\frac{L_{i,n}}{q_{i,n}}\ge\delta_i,
+\qquad
+\frac{R_{i,n}}{p_{i,n}}\ge\delta_i.
+\end{equation}
+Then $\bigcap_{i=1}^m\D(A_i)$ is syndetic. Its positive part has positive lower asymptotic density and divergent reciprocal sum.
+\end{theorem}
+
+\section{Recurrence, perturbations, and rotations}
+
+For a fixed $d$, infinitely many pairs in \eqref{eq:D} are equivalent to pairs with both entries arbitrarily large. Indeed, each first entry determines at most one second entry. In particular, $\D(A)$ is symmetric, and $0\in\D(A)$ when $A$ is infinite.
+
+For the models \eqref{eq:models}, define
+\begin{equation}\label{eq:S}
+S=\{s\in\Z:s\in(P_n\cup Q_n)-(P_n\cup Q_n)
+\text{ for infinitely many }n\}.
+\end{equation}
+This set is symmetric as well.
+
+\begin{lemma}[Transfer under bounded perturbations]\label{lem:transfer}
+For every $s\in S$ there is $d\in\D(A)$ with $|d-s|\le2C$. If $N$ is a gap bound for $S$, then $N+4C$ is a gap bound for $\D(A)$.
+\end{lemma}
+\begin{proof}
+Choose infinitely many modeled pairs $u_n-w_n=s$. By \eqref{eq:approx}, choose $a_n',b_n'\in A$ satisfying $|a_n'-u_n|,|b_n'-w_n|\le C$. Hence
+\[
+|(a_n'-b_n')-s|\le2C.
+\]
+Both entries tend to infinity along the chosen indices. The difference takes values in a fixed finite set of integers, so one value $d$ occurs infinitely often and belongs to $\D(A)$. Given $z\in\Z$, choose $s\in S\cap[z+2C,z+2C+N)$. The corresponding $d$ lies in $[z,z+N+4C)$.
+\end{proof}
+
+We use the circle norm $\normt{x}=\min_{j\in\Z}|x-j|$.
+
+\begin{lemma}[Compact rotation lemma]\label{lem:rotation}
+Let $\gamma=(\gamma_1,\ldots,\gamma_m)\in\T^m$ and let $\varepsilon_i>0$. Then
+\[
+\mathcal R=\{k\in\Z:\normt{k\gamma_i}<\varepsilon_i\text{ for every }i\}
+\]
+is syndetic. If an irrational rotation of $\T$ is given, its visits to any nonempty open arc are syndetic.
+\end{lemma}
+\begin{proof}
+Let $K$ be the closure of $\{k\gamma:k\in\Z\}$ and let
+$U=\{x\in\T^m:\normt{x_i}<\varepsilon_i\text{ for every }i\}$.
+The set $K$ is a compact subgroup. Since the orbit is dense in $K$ and $U$ is symmetric, the sets $f\gamma+U$, $f\in\Z$, cover $K$. Choose a finite subcover indexed by $F\subseteq\Z$. For every integer $k$, some $f\in F$ satisfies $(k-f)\gamma\in U$. Thus $\Z=\mathcal R+F$. If $a=\min F$ and $b=\max F$, apply this identity to $k=z+b$ to obtain an element of $\mathcal R$ in $[z,z+b-a]$.
+
+For the last assertion, the orbit closure of an irrational circle rotation is the whole circle. Translates of a nonempty open arc by the orbit therefore cover $\T$. The same finite-subcover argument applies.
+\end{proof}
+
+We recall briefly the density assertion used here. An infinite subgroup of $\T$ has nonzero elements arbitrarily close to zero, by compactness and taking differences. Multiples of an element with sufficiently small nonzero representative approximate every point of the circle. Its closure is consequently $\T$. The subgroup generated by an irrational element is infinite. The pigeonhole principle gives positive integers $q_j\to\infty$ with $q_j\alpha\to0$. Positive iterates therefore approximate each negative iterate, so the forward orbit is dense as well. Deleting finitely many iterates preserves this density.
+
+\section{The integer congruence and its interval}
+
+Suppress the subscript $n$. Let $r\in\Z$ satisfy $r\equiv a-b\pmod g$, and put
+\[
+x=\frac{b-a+r}{g}\in\Z,
+\qquad pv\equiv1\pmod q.
+\]
+The target $r+gk$ occurs in $P-Q$ exactly when
+\begin{equation}\label{eq:diophantine}
+pi-qj=x+k,\qquad 0\le i\le L,\qquad0\le j\le R.
+\end{equation}
+Define
+\begin{equation}\label{eq:endpoints}
+\ell(k)=\max\left(0,\frac{x+k}{p}\right),
+\qquad
+u(k)=\min\left(L,\frac{x+k+qR}{p}\right).
+\end{equation}
+
+\begin{lemma}\label{lem:congruence}
+The equation \eqref{eq:diophantine} has an admissible solution if and only if there is an integer $i$ such that
+\begin{equation}\label{eq:admissible}
+i\equiv v(x+k)\pmod q,
+\qquad \ell(k)\le i\le u(k).
+\end{equation}
+Moreover,
+\begin{equation}\label{eq:lipschitz}
+|\ell(k)-\ell(k')|\le\frac{|k-k'|}{p},
+\qquad
+|u(k)-u(k')|\le\frac{|k-k'|}{p},
+\end{equation}
+and
+\begin{equation}\label{eq:hullidentity}
+\len(I\cap(J+r))=gp\max\{0,u(0)-\ell(0)\}.
+\end{equation}
+\end{lemma}
+\begin{proof}
+The congruence in \eqref{eq:admissible} is equivalent to $q\mid pi-x-k$. It makes $j=(pi-x-k)/q$ an integer. The conditions $0\le j\le R$ are precisely
+$x+k\le pi\le x+k+qR$, giving \eqref{eq:endpoints} together with the bounds on $i$. Taking a minimum or maximum with a fixed real number preserves the Lipschitz bound of the other argument, which gives \eqref{eq:lipschitz}. Finally, in the coordinate $t=a+gpi$, the hulls $I$ and $J+r$ correspond respectively to $[0,L]$ and $[x/p,(x+qR)/p]$. This proves \eqref{eq:hullidentity}.
+\end{proof}
+
+In particular, every integer $i$ in the common interior
+\begin{equation}\label{eq:commoninterior}
+\left[\ell(0)+\frac{|k|}{p},\ u(0)-\frac{|k|}{p}\right]
+\end{equation}
+that has the required residue class is admissible for the target $r+gk$.
+
+\section{Bounded contact}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}(1)]
+There are only finitely many integer differences of absolute value at most $B$. Pass to an infinite subsequence on which one fixed signed difference $d_*$ occurs in $P_n-Q_n$ and the overlap bound holds. For this subsequence set
+\[
+x_n=\frac{b_n-a_n+d_*}{g},
+\]
+and use \eqref{eq:endpoints} with $r=d_*$. Choose an anchor $i_n\in[\ell_n(0),u_n(0)]$ representing $d_*$.
+
+Translating one interval by $d_*$ changes its intersection length with a fixed interval by at most $2|d_*|$. Consequently
+\[
+u_n(0)-\ell_n(0)
+\ge\delta q_n-\frac{2|d_*|}{gp_n}.
+\]
+After discarding finitely many indices, there is a fixed $\eta>0$ such that
+\begin{equation}\label{eq:anchorwidth}
+u_n(0)-\ell_n(0)\ge\eta q_n.
+\end{equation}
+Pass to a further subsequence on which $\alpha_n=v_n/q_n$ converges in $\T$ to $\alpha$.
+
+Fix $h\in\Z\setminus\{0\}$ with $\normt{h\alpha}<\eta/16$. Let $t_n$ be a least absolute residue of $v_nh$ modulo $q_n$. Then
+\begin{equation}\label{eq:smallshift}
+\frac{|t_n|}{q_n}=\normt{h\alpha_n}<\frac{\eta}{8}
+\end{equation}
+eventually. For $q_n>|h|$, the residue $t_n$ is nonzero. Otherwise the inverse congruence would give $q_n\mid h$. Thus $|t_n|\ge1$.
+
+Put $E_n=|h|/p_n$. For all sufficiently large $n$, we have $E_n<1\le|t_n|$ and, by \eqref{eq:anchorwidth}--\eqref{eq:smallshift},
+\begin{equation}\label{eq:inwardmargin}
+|t_n|+E_n\le\frac{u_n(0)-\ell_n(0)}2.
+\end{equation}
+If $i_n$ lies in the lower half of its interval, choose a sign $\sigma_n\in\{1,-1\}$ so that $\sigma_nt_n=|t_n|$. If it lies in the upper half, choose the sign so that $\sigma_nt_n=-|t_n|$. The near endpoint has margin at least $|t_n|\ge E_n$, and \eqref{eq:inwardmargin} gives the far-end margin. Therefore
+\[
+i_n+\sigma_nt_n\in[\ell_n(0)+E_n,u_n(0)-E_n].
+\]
+Its residue is $v_n(x_n+\sigma_nh)$ modulo $q_n$. Lemma~\ref{lem:congruence} proves that $d_*+\sigma_ngh\in P_n-Q_n$.
+
+For this fixed $h$, one sign occurs infinitely often. Symmetry of $S$ then gives an $s_h\in S$ satisfying
+\begin{equation}\label{eq:nearBohr}
+|s_h-gh|\le|d_*|.
+\end{equation}
+For $h=0$, the anchor itself gives the same conclusion. By Lemma~\ref{lem:rotation}, the set of integers $h$ with $\normt{h\alpha}<\eta/16$ is syndetic. Its dilation by $g$ is syndetic, and \eqref{eq:nearBohr} implies that $S$ is syndetic. Lemma~\ref{lem:transfer} completes the proof.
+\end{proof}
+
+\section{The finite circular-gap criterion}
+
+The following elementary interpretation will be useful. If $pv\equiv1\pmod q$, then
+\begin{equation}\label{eq:G}
+G=q\gap_H(v/q)
+\end{equation}
+is a positive integer. Every block of $G$ consecutive integers meets
+\[
+\{vj+qz:0\le j<H,\ z\in\Z\}.
+\]
+Indeed, the largest gap between consecutive elements of this periodic integer set is $G$. Translating the phase set preserves this property.
+
+\begin{lemma}[Two-window lemma]\label{lem:twowindows}
+Use the notation of Section~3 and let $G$ be given by \eqref{eq:G}. Suppose $u(0)-\ell(0)\ge G$. For an integer $k_0$, assume
+\begin{equation}\label{eq:largepq}
+p>2(|k_0|+2H),\qquad q>2H.
+\end{equation}
+Then some $k\in\{k_0,\ldots,k_0+2H-1\}$ satisfies $r+gk\in P-Q$.
+\end{lemma}
+\begin{proof}
+Put $E=(|k_0|+2H)/p<1/2$ and $m=\lfloor\ell(0)+E\rfloor+1$. Every integer $i$ with
+\begin{equation}\label{eq:safeintegers}
+m\le i\le m+G-2
+\end{equation}
+lies in $[\ell(0)+E,u(0)-E]$. The lower bound follows from the definition of $m$. For the upper bound, use
+\[
+m\le\ell(0)+E+1,\qquad
+\ell(0)+G\le u(0),\qquad 2E<1.
+\]
+The resulting common interval is contained in $[\ell(k),u(k)]$ for every $k$ in the asserted $2H$-window, by \eqref{eq:lipschitz}.
+
+Consider separately the two disjoint windows
+\[
+W_0=\{k_0,\ldots,k_0+H-1\},\qquad
+W_1=\{k_0+H,\ldots,k_0+2H-1\}.
+\]
+For a window beginning at $s$, apply the periodic-gap property at $m-v(x+s)$ and then translate by $v(x+s)$. Thus, for each $\nu\in\{0,1\}$, there are $h_\nu\in W_\nu$ and an integer $i_\nu\in[m,m+G-1]$ with
+\[
+i_\nu\equiv v(x+h_\nu)\pmod q.
+\]
+If either $i_\nu$ satisfies \eqref{eq:safeintegers}, Lemma~\ref{lem:congruence} gives the required target. If neither does, both equal $m+G-1$. Multiplying their congruences by $p$ then gives
+$h_1-h_0\equiv0\pmod q$. But the two chosen indices satisfy $0<h_1-h_0<2H<q$, a contradiction.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}(2)]
+Restrict to the infinite set of indices satisfying \eqref{eq:finite-test}, and then to a subsequence with $r_n=r$ fixed. For each such model use $x_n=(b_n-a_n+r)/g$. By \eqref{eq:hullidentity}, the finite test is exactly
+\[
+u_n(0)-\ell_n(0)\ge q_n\gap_H(v_n/q_n).
+\]
+For each fixed integer $k_0$, condition \eqref{eq:largepq} holds for all sufficiently large $n$. Lemma~\ref{lem:twowindows} produces a difference $r+gk$ with $k$ in the fixed $2H$-window. One of these finitely many differences occurs for infinitely many indices, and hence belongs to $S$.
+
+Given $z\in\Z$, take $k_0=\lceil(z-r)/g\rceil$. Then
+$z\le r+gk_0<z+g$, and every $r+gk$ from this $2H$-window lies in $[z,z+2gH)$. Thus $2gH$ is a gap bound for $S$. Lemma~\ref{lem:transfer} gives $2gH+4C$ for $\D(A)$.
+\end{proof}
+
+\section{Centered finite families}
+
+\begin{proof}[Proof of Theorem~\ref{thm:family}]
+First consider one set and suppress $i$. Pass to a subsequence on which the normalized inverse $\alpha_n=v_n/q_n$ converges to $\alpha\in\T$. Fix $k\in\Z$ with $\normt{k\alpha}<\delta/2$. Choose a least absolute residue $u_n$ of $v_nk$ modulo $q_n$. For all sufficiently large $n$,
+\[
+\frac{|u_n|}{q_n}=\normt{k\alpha_n}<\frac{3\delta}{4},
+\qquad \frac{|k|}{p_nq_n}<\frac\delta4.
+\]
+The number $w_n=(p_nu_n-k)/q_n$ is an integer, and
+\[
+\frac{|w_n|}{p_n}\le\frac{|u_n|}{q_n}+\frac{|k|}{p_nq_n}<\delta.
+\]
+Thus $|u_n|\le L_n$ and $|w_n|\le R_n$. The two modeled points with these indices have difference $gk$, and their entries escape to infinity. We have proved
+\begin{equation}\label{eq:centeredBohr}
+\{gk:k\in\Z,\ \normt{k\alpha}<\delta/2\}\subseteq\D(A).
+\end{equation}
+
+Apply \eqref{eq:centeredBohr} separately to each $A_i$, obtaining $\alpha_i\in\T$. Let $G=\operatorname{lcm}(g_1,\ldots,g_m)$ and set $\gamma_i=(G/g_i)\alpha_i$. Lemma~\ref{lem:rotation} shows that
+\[
+\mathcal R=\{k\in\Z:\normt{k\gamma_i}<\delta_i/2\text{ for every }i\}
+\]
+is syndetic. For $k\in\mathcal R$, formula \eqref{eq:centeredBohr} gives $Gk\in\D(A_i)$ for every $i$. The dilation $G\mathcal R$ is syndetic, proving the intersection assertion.
+
+If $M$ is a gap bound for the intersection, each interval $[jM,(j+1)M)$, $j\ge1$, contains a positive element. These disjoint intervals give lower asymptotic density at least $1/M$. Choosing one element from each also gives a reciprocal-sum lower bound
+\[
+\sum_{j\ge1}\frac1{(j+1)M}=\infty.
+\]
+\end{proof}
+
+\section{Separated models and zero-density examples}
+
+\begin{proposition}\label{prop:separated}
+Suppose $A=\bigcup_n(P_n\cup Q_n)\subseteq\N$ is an exact union, the block hulls are ordered with successive gaps tending to infinity, and \eqref{eq:standing} holds. Suppose also that $\len(I_n\cap J_n)\ge\delta M_n$ for every sufficiently large $n$, for some $\delta>0$. Then
+\[
+\min_{u\in P_n,\,v\in Q_n}|u-v|\longrightarrow\infty
+\quad\Longrightarrow\quad \D(A)=\{0\}.
+\]
+If these minimum distances do not tend to infinity, then $\D(A)$ is syndetic.
+\end{proposition}
+\begin{proof}
+Fix a nonzero integer $d$. Sufficiently late distinct blocks are separated by more than $|d|$, and sufficiently late row steps exceed $|d|$. Thus a pair with difference $d$ in the late blocks must use different rows of the same block. If their minimum mutual distance tends to infinity, these pairs are eventually impossible as well. The finitely many earlier points yield only finitely many pairs with difference $d$. Since $A$ is infinite, $\D(A)=\{0\}$.
+
+Failure of convergence of the minimum distances to infinity gives a finite $B$ and infinitely many bounded contacts. Theorem~\ref{thm:main}(1), with $C=0$, applies.
+\end{proof}
+
+For the explicit examples, choose $x_n\in\Z_{\ge0}$ and place the rows by
+\begin{equation}\label{eq:placement}
+\begin{split}
+a_1&=1,\qquad b_n=a_n+gx_n,\\
+a_{n+1}&=a_n+g\max(p_nL_n,x_n+q_nR_n)+n+1.
+\end{split}
+\end{equation}
+The gap between consecutive block hulls is exactly $n+1$.
+We use the upper Banach density
+\[
+d^*(A)=\limsup_{N\to\infty}\ \sup_{t\in\Z}
+\frac{|A\cap[t,t+N)|}{N},
+\]
+where $N$ ranges over the positive integers.
+
+\begin{lemma}\label{lem:sparse}
+Any union placed by \eqref{eq:placement}, with both row steps tending to infinity, has zero upper Banach density. Every fixed three-element set has only finitely many translates contained in the union.
+\end{lemma}
+\begin{proof}
+Fix a positive integer $T$. Beyond finitely many blocks, every hull gap and both row steps exceed $T$. An interval of diameter at most $T$ meets at most one of these blocks and contains at most one point from each of its rows. It therefore contains at most two late points. Let $F$ be the finite set of earlier points. Any interval of $N$ consecutive integers contains at most
+\[
+2\lceil N/T\rceil+|F|
+\]
+points of $A$. Dividing by $N$, taking the supremum over interval positions and then the limit superior as $N\to\infty$ gives $d^*(A)\le2/T$. Since $T$ is arbitrary, $d^*(A)=0$. Taking $T$ larger than the diameter of a fixed three-element set excludes every translate sufficiently far out. Only finitely many earlier translates remain.
+\end{proof}
+
+\begin{proposition}[An exact irrational example]\label{prop:irrational}
+For every irrational $\alpha\in(0,1)$ there is an exact separated union satisfying both conditions of Theorem~\ref{thm:main}, with $g=1$ and $C=0$, such that
+\begin{equation}\label{eq:exactD}
+\D(A)=\{0\}\cup\{d\in\Z:\normt{\alpha d}>1/4\}.
+\end{equation}
+The set $A$ has zero upper Banach density. The set $\D(A)$ contains no infinite arithmetic progression of nonzero step, and $A$ has infinitely many pairwise almost disjoint translates.
+\end{proposition}
+\begin{proof}
+Take an increasing sequence of primes $q_n$ large enough that $v_n=\lfloor\alpha q_n\rfloor$ lies in $\{1,\ldots,q_n-1\}$. Choose $w_n\in\{1,\ldots,q_n-1\}$ with $v_nw_n\equiv1\pmod{q_n}$, and put
+\begin{equation}\label{eq:irrationalparameters}
+\begin{split}
+p_n&=q_n+w_n,\qquad
+x_n=p_n\lfloor q_n/2\rfloor\pmod{q_n},\\
+L_n&=\lfloor q_n/4\rfloor,\qquad
+R_n=\lfloor p_n/4\rfloor,
+\end{split}
+\end{equation}
+using the least nonnegative residue for $x_n$. Then $\gcd(p_n,q_n)=1$, $p_nv_n\equiv1\pmod{q_n}$, and $v_n/q_n\to\alpha$. Place the blocks by \eqref{eq:placement}.
+
+For any fixed $d$, the normalized admissible interval $[\ell_n(d)/q_n,u_n(d)/q_n]$ tends to $[0,1/4]$, and the fractional residue of an admissible $i/q_n$ tends to
+\[
+\fr{\tfrac12+\alpha d},
+\]
+because $v_nx_n\equiv\lfloor q_n/2\rfloor\pmod{q_n}$. For $d\ne0$, irrationality ensures that this limit is neither endpoint. The interval eventually has length less than one and lies arbitrarily close to $[0,1/4]$. Lemma~\ref{lem:congruence} therefore gives
+\[
+d\in P_n-Q_n\text{ eventually}
+\quad\Longleftrightarrow\quad
+\fr{\tfrac12+\alpha d}\in(0,1/4).
+\]
+The reversed orientation gives the reflected arc. The separated-block argument excludes all other recurrent nonzero differences, proving \eqref{eq:exactD}.
+
+The normalized overlap tends to $1/4$. Density of the irrational orbit provides a fixed $d$ whose phase lies in the interior arc, giving bounded contact. It also gives an $H$ with $\gap_H(\alpha)<1/4$. The largest circular gap of a finite point set is continuous under movement of its points: moving each point by at most $\rho$ changes that gap by at most $2\rho$, as follows by trimming $\rho$ from each end of an empty arc and reversing the roles of the sets. Hence \eqref{eq:finite-test} holds eventually. Lemma~\ref{lem:sparse} proves zero upper Banach density.
+
+On an arithmetic progression $d_0+hk$ with $h\ne0$, the phases $\alpha(d_0+hk)$ are dense in $\T$. Infinitely many have circle norm less than $1/4$ and give nonzero integers outside \eqref{eq:exactD}. Thus no such infinite progression is contained in $\D(A)$.
+
+Finally choose infinitely many distinct positive integers $f$ with $\fr{\alpha f}\in(0,1/8)$. For distinct choices $f,f'$, we have $\normt{\alpha(f-f')}<1/8$, so $f-f'\notin\D(A)$. An infinite intersection $(A-f)\cap(A-f')$ would give infinitely many pairs in $A$ with this difference. Every such intersection is therefore finite.
+\end{proof}
+
+\begin{remark}
+Lemma~\ref{lem:sparse} also separates these examples from the supra-SIM class. Goldbring--Leth \cite[Corollary~4.7]{GL} show that every supra-SIM set contains $B+C$ with $B$ infinite and $C$ of any prescribed finite cardinality. Taking $|C|=3$ contradicts the lemma.
+\end{remark}
+
+\section{Boundary and order-of-magnitude examples}
+
+\begin{proposition}\label{prop:rational}
+For every rational $a/b\in[0,1)$ in lowest terms, including $a=0,b=1$, there is an exact separated union with normalized inverse tending to $a/b$, normalized overlap tending to $1/b$, and recurrent difference set $\{0\}$.
+\end{proposition}
+\begin{proof}
+Take increasing integers $q_n\ge(8b)^2$ satisfying $aq_n\equiv-1\pmod b$, and set
+\begin{equation}\label{eq:rationalparameters}
+\begin{split}
+p_n&=q_n+b,\qquad v_n=(aq_n+1)/b,\qquad m_n=\lceil\sqrt{q_n}\rceil,\\
+\tau_n&=1/b-2m_n/q_n,\qquad
+x_n=p_n(q_n-m_n)\pmod{q_n},\\
+L_n&=\lfloor\tau_nq_n\rfloor,\qquad
+R_n=\lfloor\tau_np_n\rfloor.
+\end{split}
+\end{equation}
+The congruence is automatic when $b=1$. The parameters have $\tau_n>0$, $\gcd(p_n,q_n)=1$, and $p_nv_n\equiv1\pmod{q_n}$. Use the least nonnegative $x_n$ and the placement \eqref{eq:placement}, with $g=1$.
+
+Since $0\le x_n<q_n$, the normalized overlap tends to $1/b$. For a fixed $d$, the fractional class in the admissibility test is
+\begin{equation}\label{eq:rationalphase}
+\frac{ad}{b}-\frac{m_n}{q_n}+\frac{d}{bq_n}\pmod1.
+\end{equation}
+If $ad/b$ is an integer, its representative is eventually near $1-m_n/q_n$. Otherwise that representative is at least $1/b-m_n/q_n+O_d(1/q_n)$. In both cases it eventually exceeds $\tau_n$, because $m_n\to\infty$. Every allowed $i/q_n$ lies in $[0,L_n/q_n]\subseteq[0,\tau_n]$. Thus every fixed cross-row difference is eventually absent. The same holds after reversal, while same-row and cross-block differences are excluded as in Proposition~\ref{prop:separated}. Hence $\D(A)=\{0\}$.
+\end{proof}
+
+The construction shows that equality at a limiting rational overlap does not supply the finite inequalities in \eqref{eq:finite-test}. A zero limiting overlap likewise allows failure with an irrational limiting inverse. To see this, retain the steps and offsets in \eqref{eq:irrationalparameters}, and replace both normalized row lengths by a positive sequence tending to zero. Every fixed nonzero target has a limiting phase different from zero and is eventually absent.
+
+\begin{proposition}\label{prop:order}
+For each $g,H\ge1$ there is an exact separated union satisfying the finite test eventually and having $\D(A)=gH\Z$. Thus the order $gH$ of the gap bound in Theorem~\ref{thm:main}(2) is necessary.
+\end{proposition}
+\begin{proof}
+For $H\ge2$, take increasing $q_n\ge2$ with $q_n\equiv-1\pmod H$, let $p_n=q_n+H$ and $v_n=(q_n+1)/H$, and set
+\[
+\lambda=\frac{3}{2H},\qquad \beta=\frac{3}{4H},\qquad
+x_n=p_n\lfloor\beta q_n\rfloor\pmod{q_n},
+\]
+\[
+L_n=\lfloor\lambda q_n\rfloor,
+\qquad R_n=\lfloor\lambda p_n\rfloor.
+\]
+Place the rows by \eqref{eq:placement} with the chosen $g$. All within-block differences are multiples of $g$. For a fixed target $gk$, its limiting fractional phase is $\fr{\beta+k/H}$ and the normalized admissible interval tends to $[0,\lambda]$. Among the $H$ possible phases, exactly the one with $k\equiv0\pmod H$ is in $(0,\lambda)$, and none is an endpoint. The reflected orientation gives the same congruence class. Thus the separated-block argument gives $\D(A)=gH\Z$.
+
+The largest circular gap of the first $H$ multiples of $v_n/q_n$ tends to $1/H<\lambda$, so the finite test holds eventually. For $H=1$, take $q_n=n+1$, $p_n=q_n+1$, $x_n=0$, and $L_n=R_n=2q_n$. Each fixed multiple $gk$ recurs by using equal indices in the two rows and, when necessary, reversing the orientation. Every within-block difference is a multiple of $g$, so $\D(A)=g\Z$. The normalized overlap tends to $2$, and the singleton gap is $1$.
+
+The smallest gap bound of $gH\Z$ is $gH$, which proves the assertion.
+\end{proof}
+
+For a centered zero-density example in Theorem~\ref{thm:family}, take
+\[
+q_n=n+1,\quad p_n=q_n+1,\quad L_n=q_n,\quad R_n=p_n,
+\quad c_n=a_n+gp_nq_n,
+\]
+where $a_1=1$ and $a_{n+1}=a_n+2gp_nq_n+n+1$. The centered block hull is $[a_n,a_n+2gp_nq_n]$. Equal centered indices give every fixed multiple of $g$ eventually, so $\D(A)=g\Z$. Lemma~\ref{lem:sparse} gives zero upper Banach density.
+
+The uncentered hypotheses alone do not ensure the finite-intersection conclusion. Use the irrational construction with common $\alpha$, normalized row length $1/20$, and phases $\beta=4/5$ and $\beta=1/2$ in place of $1/2$ in \eqref{eq:irrationalparameters}. The respective recurrent nonzero phases $\fr{\alpha d}$ lie in
+\[
+(1/5,1/4)\cup(3/4,4/5)
+\quad\text{and}\quad
+(1/2,11/20)\cup(9/20,1/2).
+\]
+These open sets are disjoint. The two recurrent difference sets are individually syndetic and have intersection $\{0\}$.
+
+\section{Reciprocal divergence}
+
+Reciprocal divergence by itself does not force a nonzero recurrent difference. An elementary example is
+\begin{equation}\label{eq:harmonic}
+a_m=m\bigl(1+\lfloor\log_2m\rfloor\bigr),\qquad m\ge1.
+\end{equation}
+For $2^{j-1}\le m<2^j$, we have $a_m=jm$. Consecutive gaps within this block equal $j$, and the transition to the next block has a still larger gap. Thus the gaps tend to infinity and $\D(\{a_m:m\ge1\})=\{0\}$. On the other hand,
+\[
+\sum_{m=2^{j-1}}^{2^j-1}\frac1{a_m}\ge\frac1{2j},
+\]
+so the reciprocal sum diverges.
+
+The rational construction of Proposition~\ref{prop:rational} can also be made reciprocally divergent. After its $n$th row block, whose last point is $e_n$, insert the progression
+\[
+c_n+(n+1)\{0,\ldots,T_n\},\qquad
+c_n=e_n+n+1,\qquad T_n=c_n2^{2(n+1)}.
+\]
+Start the next row block at $c_n+(n+1)T_n+n+1$. Each inserted progression contributes more than $1$ to the reciprocal sum, since
+\begin{align*}
+\sum_{j=0}^{T_n}\frac1{c_n+(n+1)j}
+&\ge\int_0^{T_n+1}\frac{dt}{c_n+(n+1)t}\\
+&=\frac1{n+1}\log\left(1+\frac{(n+1)(T_n+1)}{c_n}\right)
+>2\log2>1.
+\end{align*}
+Every inserted step and every gap between the enlarged pieces tends to infinity. No new fixed nonzero difference recurs, and the argument of Lemma~\ref{lem:sparse} still gives zero upper Banach density. The resulting set therefore has divergent reciprocal sum and recurrent difference set $\{0\}$.
+
+\section*{Acknowledgments}
+The authors acknowledge AI assistance from OpenAI's ChatGPT in developing and reviewing the arguments and preparing the mathematical exposition.
+
+\begin{thebibliography}{9}
+\raggedright
+\bibitem{EG}
+P. Erd\H{o}s and R. L. Graham,
+\emph{Old and New Problems and Results in Combinatorial Number Theory},
+Monographies de L'Enseignement Math\'ematique, no.~28,
+Universit\'e de Gen\`eve, Geneva, 1980.
+
+\bibitem{GL}
+I. Goldbring and S. Leth,
+\emph{On supra-SIM sets of natural numbers},
+\href{https://arxiv.org/abs/1805.05933}{arXiv:1805.05933}, 2018.
+
+\bibitem{Leth}
+S. Leth,
+\emph{Some nonstandard methods in combinatorial number theory},
+Studia Logica \textbf{47} (1988), no.~3, 265--278.
+\href{https://doi.org/10.1007/BF00370556}{doi:10.1007/BF00370556}.
+
+\bibitem{Ruzsa}
+I. Z. Ruzsa,
+\emph{On difference sets},
+Studia Scientiarum Mathematicarum Hungarica \textbf{13} (1978), 319--326.
+\end{thebibliography}
+\end{document}

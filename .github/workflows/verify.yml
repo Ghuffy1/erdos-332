@@ -1,0 +1,42 @@
+name: Verify formal proof
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '*.lean'
+      - 'lake*'
+      - 'lean-toolchain'
+      - 'verification/*.lean'
+      - 'scripts/**'
+      - '.github/workflows/**'
+  pull_request:
+    paths:
+      - '*.lean'
+      - 'lake*'
+      - 'lean-toolchain'
+      - 'verification/*.lean'
+      - 'scripts/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    env:
+      LEAN_NUM_THREADS: "2"
+    steps:
+      - uses: actions/checkout@f548e57e544e1ff5a4c46bf1e1b8685f8e4a348a
+      - uses: leanprover/lean-action@498ce7030982ff0e0cecd98a8f5a7c90615b4e41
+        with:
+          build: "true"
+          test: "false"
+          lint: "false"
+          use-mathlib-cache: "true"
+          leanchecker: "false"
+      - name: Check statements, axioms, dependencies, and fresh kernel replay
+        run: python3 scripts/verify.py --kernel-replay
