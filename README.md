@@ -2,6 +2,8 @@
 
 Combined mathematical-solution and formalization submission for Erdős Problem 332, catalogued as **JSP-000276**.
 
+Submitted by Ghuffy1 in [JSP PR #5566](https://github.com/TheJustinSunPrize/awards/pull/5566). The proof repository is public for independent review. [Submission receipt](submission/receipt.json)
+
 **Repository owner and lead submitter — Grant Huffman (@Ghuffy1).** Will Howe (@H0W4RD-dev), Grant Huffman (@Ghuffy1), Jensen Kohlmeyer (@JENW1N), and Liam Kruer (@lkruer) receive equal contribution credit. The author order follows surnames. [Attribution record](AUTHORS.md)
 
 ## Mathematical materials
@@ -30,9 +32,9 @@ The command builds the project, checks the independent recurring-pair statement 
 
 ## Submission and review
 
-[Submission materials](submission/README.md) contain the proposed catalog-only patch, the contribution PR draft, individual unsigned claim drafts, and the requirements matrix. Each award applicant submits and confirms their own claim. Ghuffy1 coordinates the joint contribution submission.
+[Submission materials](submission/README.md) contain the proposed catalog-only patch, the submitted contribution PR body, individual unsigned claim drafts, and the requirements matrix. Each award applicant submits and confirms their own claim. Ghuffy1 coordinates the joint contribution submission.
 
-The owner has authorized public release and submission after final verification. Mathematical acceptance, full-problem scope acceptance, priority, identity verification, and awards belong to the prize's external process. The open-ended nature of Erdős 332 and the earlier density-only submissions are addressed explicitly in the coverage and prior-work documents.
+The owner authorized publication and submission after final verification. The contribution PR is open for review. Mathematical acceptance, full-problem scope acceptance, priority, identity verification, and awards belong to the prize's external process. The open-ended nature of Erdős 332 and the earlier density-only submissions are addressed explicitly in the coverage and prior-work documents.
 
 ## Provenance and rights
 

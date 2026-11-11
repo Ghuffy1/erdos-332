@@ -1,0 +1,25 @@
+{
+  "checked_at_utc": "2026-11-11T16:42:03.364373+00:00",
+  "url": "https://github.com/TheJustinSunPrize/awards/pull/5566",
+  "number": 5566,
+  "created_at": "2026-11-11T16:41:51Z",
+  "author": "Ghuffy1",
+  "state": "open",
+  "draft": false,
+  "head_branch": "erdos-332-submission-20261111-8f01f538",
+  "head_commit": "2de5fa60858fc05c375c4daa38f0f3bae3b0e2b5",
+  "base_commit": "b1bfe454d37db2838ef76756830aeb23c40de95e",
+  "files": [
+    "problems/catalog-0201-0300.md"
+  ],
+  "body_readback_matches": true,
+  "all_four_contributors_present": true,
+  "mergeable": true,
+  "proof_commit": "6d65e28f986b8434d9448e6e4ba73e7ddd17ef43",
+  "manuscript_commit": "cf1e6ab6401ce288dcb4194fdfe314c2edb2fc84",
+  "evidence_commit": "8f01f5385230bc28deaab50f14087320eda84cfb",
+  "proof_repository": "https://github.com/Ghuffy1/erdos-332",
+  "proof_repository_visibility": "public",
+  "jsp_reported_automated_checks": [],
+  "claim_stage": "Awaiting contribution PR review and merge before individual claims."
+}

@@ -1,6 +1,6 @@
 # Verification report
 
-**Passed for the submitted progression results. Ready for contribution submission and independent prize review.**
+**Passed for the submitted progression results. Submitted for independent prize review.**
 
 ## Exact versions
 
@@ -56,3 +56,7 @@ Ghuffy1 is the repository owner and lead contribution submitter. Will Howe, Gran
 The owner authorized public release and contribution submission after final verification. The release audit checks repository content, history, workflow logs, official forms, source links, and the catalog-only patch. The current upstream entry remains Open / Lean proof No / Eligible to claim No until the maintainers review the proposed change.
 
 Contribution-PR submission, mathematical acceptance, individual claims, identity verification, candidate publication, public review, and awards are distinct stages of the official process. The prepared individual claims remain unsigned for their applicants. [Submission readiness](../submission/readiness.md)
+
+## Submitted contribution
+
+[JSP PR #5566](https://github.com/TheJustinSunPrize/awards/pull/5566) was opened by Ghuffy1 on 11 November 2026. The posted body, pinned references, all four author credits, and single catalog-file change were verified by readback. The proof repository is public. The PR is open for maintainer review. [Submission receipt](../submission/receipt.json)

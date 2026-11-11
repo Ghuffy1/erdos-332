@@ -21,7 +21,7 @@ Combined mathematical-solution and formalization submission by Ghuffy1. The cata
 ## Formal statement
 
 - **Complete mathematical solution supplied with the formal proof** — The manuscript linked above, with its [typesetting source](https://github.com/Ghuffy1/erdos-332/blob/cf1e6ab6401ce288dcb4194fdfe314c2edb2fc84/paper/recurring_differences.tex).
-- **Mathematical review status** — Proposed sufficient-condition answer awaiting independent full-problem suitability review. Prior internal checking is supporting evidence.
+- **Mathematical review status** — Proposed sufficient-condition answer awaiting independent full-problem suitability review. The completed AI-assisted pre-submission mathematical review is supporting evidence.
 - **Formal statement location** — [Submission.lean](https://github.com/Ghuffy1/erdos-332/blob/6d65e28f986b8434d9448e6e4ba73e7ddd17ef43/Submission.lean).
 - **Main target** — `Erdos332Submission.erdos_332`.
 - **Statement origin** — An explicit supplied condition for the open-ended maintained statement. Maintainer approval of the proposed mathematical scope is requested.
@@ -76,7 +76,8 @@ The evidence helper `python scripts/verify.py --kernel-replay` records these che
 - **Date** — 11 November 2026.
 - **Technical result** — All checks passed for 64 audited declarations.
 - **Axioms** — `propext`, `Classical.choice`, and `Quot.sound`.
-- **Report** — [verification report](https://github.com/Ghuffy1/erdos-332/blob/main/verification/report.md), with [raw evidence](https://github.com/Ghuffy1/erdos-332/blob/main/verification/final-review).
+- **Report** — [verification report](https://github.com/Ghuffy1/erdos-332/blob/8f01f5385230bc28deaab50f14087320eda84cfb/verification/report.md), with [raw evidence](https://github.com/Ghuffy1/erdos-332/blob/8f01f5385230bc28deaab50f14087320eda84cfb/verification/final-review).
+- **Mathematical review** — [Full pre-submission rereading](https://github.com/Ghuffy1/erdos-332/blob/8f01f5385230bc28deaab50f14087320eda84cfb/verification/final-review/mathematical-review.md).
 - **Hosted run** — [GitHub Actions 43057640603](https://github.com/Ghuffy1/erdos-332/actions/runs/43057640603), successful at the final verification checkout identified above.
 - **Trust and scope** — The replay uses Lean's kernel. Independent-implementation checking and independent mathematical acceptance remain outstanding.
 
@@ -110,7 +111,7 @@ The following confirmations accompany this contribution submission under the own
 - [x] For Lean, I am claiming my own contribution in the original personal or organization repository, with verifiable contribution evidence for an organization repository. The selected commit is in the named branch, and I supplied statement correspondence, reproduction commands and axiom audit results.
 - [x] This PR contains no Lean source files, archives, binaries, vendored dependencies or private identity/contact/payment information.
 
-This draft requests full-problem scope review of the proposed sufficient-condition answer. It carries no award, recipient, payment, or completed public-review claim.
+This submission requests full-problem scope review of the proposed sufficient-condition answer. It carries no award, recipient, payment, or completed public-review claim.
 
 ---
 Adapted from The Justin Sun Prize contribution template at revision `b1bfe454d37db2838ef76756830aeb23c40de95e`, under CC BY 4.0. Changes supply the present source, authors, verification evidence, and submission and review status.

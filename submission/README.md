@@ -2,11 +2,11 @@
 
 The current route is the legacy contribution-PR process. JSP-000276 is absent from the 50-problem MathDB pilot register at official revision `b1bfe454d37db2838ef76756830aeb23c40de95e`.
 
-The owner has authorized release and the contribution submission following final verification. Individual award claims follow the official process after the required contribution PR merge.
+The proof repository is public, and [JSP PR #5566](https://github.com/TheJustinSunPrize/awards/pull/5566) has been submitted following final verification. [Verified submission receipt](receipt.json) Individual award claims follow the official process after the required contribution PR merge.
 
 ## Materials
 
-- `contribution-pr.md` is the combined mathematical-solution/formalization contribution draft.
+- `contribution-pr.md` records the submitted combined mathematical-solution/formalization PR body.
 - `awards.patch` changes the permitted fields of the single catalog entry. The eligibility and claim-status fields are reserved for maintainers.
 - `claims/` contains one unsigned award-claim draft for each contributor. Each applicant must submit through their own account after the contribution PR has merged, subject to the applicable rules.
 - `requirements.json` and `readiness.md` map the official requirements to evidence and outstanding external actions.

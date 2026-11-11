@@ -107,13 +107,13 @@
     {
       "id": "R18",
       "requirement": "Correct repository owner and reviewer access",
-      "status": "owner verified; public release authorized",
+      "status": "passed; owner Ghuffy1 and repository public",
       "evidence": "https://github.com/Ghuffy1/erdos-332"
     },
     {
       "id": "R19",
       "requirement": "Publication and submission authorization",
-      "status": "authorized after successful final verification",
+      "status": "authorized and completed after final verification",
       "evidence": "submission/readiness.md"
     },
     {
@@ -143,8 +143,8 @@
     {
       "id": "R24",
       "requirement": "Required contribution PR merge",
-      "status": "pending authorized public submission",
-      "evidence": "submission/contribution-pr.md"
+      "status": "submitted; awaiting maintainer review and merge",
+      "evidence": "https://github.com/TheJustinSunPrize/awards/pull/5566; submission/receipt.json"
     },
     {
       "id": "R25",

@@ -1,10 +1,12 @@
 # Submission readiness
 
-## Prepared repository
+## Submitted repository
 
-The external proof repository is owned by **Ghuffy1** and has been authorized for public release after final verification. Will Howe, Grant Huffman, Jensen Kohlmeyer, and Liam Kruer are listed as equal contributors, with the GitHub handles and correspondence addresses supplied by the owner. The paper orders authors alphabetically by surname and includes the AI acknowledgment.
+The external proof repository is owned by **Ghuffy1** and is public for independent review after successful final verification. Will Howe, Grant Huffman, Jensen Kohlmeyer, and Liam Kruer are listed as equal contributors, with the GitHub handles and correspondence addresses supplied by the owner. The paper orders authors alphabetically by surname and includes the AI acknowledgment.
 
-The current preparation targets the legacy process for **JSP-000276 / Erdős 332**. The official rule snapshot is pinned in `rules-review.json`.
+The submission follows the legacy process for **JSP-000276 / Erdős 332**. The official rule snapshot is pinned in `rules-review.json`.
+
+The contribution is submitted in [JSP PR #5566](https://github.com/TheJustinSunPrize/awards/pull/5566). The [receipt](receipt.json) verifies the author, body, branch, and single catalog-file change.
 
 ## Technical evidence
 
